@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.anjero.pro.module.security.mapper.SecurityAdminMapper">
+  <resultMap id="BaseResultMap" type="net.anjero.pro.module.security.pojo.SecurityAdmin">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="is_enable" jdbcType="INTEGER" property="isEnable" />
+    <result column="login_attempts" jdbcType="INTEGER" property="loginAttempts" />
+    <result column="login_attempts_time" jdbcType="TIMESTAMP" property="loginAttemptsTime" />
+    <result column="work_stauts" jdbcType="INTEGER" property="workStauts" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, username, password, real_name, type, is_enable, login_attempts, login_attempts_time,
+    work_stauts
+  </sql>
+  <select id="selectByExample" parameterType="net.anjero.pro.module.security.pojo.SecurityAdminExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from security_admin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0">
+      limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from security_admin
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from security_admin
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="net.anjero.pro.module.security.pojo.SecurityAdminExample">
+    delete from security_admin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="net.anjero.pro.module.security.pojo.SecurityAdmin">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into security_admin (username, password, real_name,
+    type, is_enable, login_attempts,
+    login_attempts_time, work_stauts)
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{realName,jdbcType=VARCHAR},
+    #{type,jdbcType=INTEGER}, #{isEnable,jdbcType=INTEGER}, #{loginAttempts,jdbcType=INTEGER},
+    #{loginAttemptsTime,jdbcType=TIMESTAMP}, #{workStauts,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="net.anjero.pro.module.security.pojo.SecurityAdmin">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into security_admin
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="realName != null">
+        real_name,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="isEnable != null">
+        is_enable,
+      </if>
+      <if test="loginAttempts != null">
+        login_attempts,
+      </if>
+      <if test="loginAttemptsTime != null">
+        login_attempts_time,
+      </if>
+      <if test="workStauts != null">
+        work_stauts,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="isEnable != null">
+        #{isEnable,jdbcType=INTEGER},
+      </if>
+      <if test="loginAttempts != null">
+        #{loginAttempts,jdbcType=INTEGER},
+      </if>
+      <if test="loginAttemptsTime != null">
+        #{loginAttemptsTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="workStauts != null">
+        #{workStauts,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="net.anjero.pro.module.security.pojo.SecurityAdminExample" resultType="java.lang.Integer">
+    select count(*) from security_admin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update security_admin
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.username != null">
+        username = #{record.username,jdbcType=VARCHAR},
+      </if>
+      <if test="record.password != null">
+        password = #{record.password,jdbcType=VARCHAR},
+      </if>
+      <if test="record.realName != null">
+        real_name = #{record.realName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.isEnable != null">
+        is_enable = #{record.isEnable,jdbcType=INTEGER},
+      </if>
+      <if test="record.loginAttempts != null">
+        login_attempts = #{record.loginAttempts,jdbcType=INTEGER},
+      </if>
+      <if test="record.loginAttemptsTime != null">
+        login_attempts_time = #{record.loginAttemptsTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.workStauts != null">
+        work_stauts = #{record.workStauts,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update security_admin
+    set id = #{record.id,jdbcType=INTEGER},
+    username = #{record.username,jdbcType=VARCHAR},
+    password = #{record.password,jdbcType=VARCHAR},
+    real_name = #{record.realName,jdbcType=VARCHAR},
+    type = #{record.type,jdbcType=INTEGER},
+    is_enable = #{record.isEnable,jdbcType=INTEGER},
+    login_attempts = #{record.loginAttempts,jdbcType=INTEGER},
+    login_attempts_time = #{record.loginAttemptsTime,jdbcType=TIMESTAMP},
+    work_stauts = #{record.workStauts,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="net.anjero.pro.module.security.pojo.SecurityAdmin">
+    update security_admin
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realName != null">
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="isEnable != null">
+        is_enable = #{isEnable,jdbcType=INTEGER},
+      </if>
+      <if test="loginAttempts != null">
+        login_attempts = #{loginAttempts,jdbcType=INTEGER},
+      </if>
+      <if test="loginAttemptsTime != null">
+        login_attempts_time = #{loginAttemptsTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="workStauts != null">
+        work_stauts = #{workStauts,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="net.anjero.pro.module.security.pojo.SecurityAdmin">
+    update security_admin
+    set username = #{username,jdbcType=VARCHAR},
+    password = #{password,jdbcType=VARCHAR},
+    real_name = #{realName,jdbcType=VARCHAR},
+    type = #{type,jdbcType=INTEGER},
+    is_enable = #{isEnable,jdbcType=INTEGER},
+    login_attempts = #{loginAttempts,jdbcType=INTEGER},
+    login_attempts_time = #{loginAttemptsTime,jdbcType=TIMESTAMP},
+    work_stauts = #{workStauts,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByExampleWithRowbounds" parameterType="net.anjero.pro.module.security.pojo.SecurityAdminExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from security_admin
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+    <select id="login" parameterType="net.anjero.pro.module.security.pojo.SecurityAdmin"
+            resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+      from security_admin
+      <if test="_parameter != null">
+        <include refid="Example_Where_Clause" />
+      </if>
+    </select>
+
+    <delete id="deleteAdminRoles" parameterType="java.lang.Integer">
+      delete from security_admin_role
+      where admin_id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insertAdminRole" parameterType="map">
+      insert into security_admin_role (admin_id, role_id)
+      values (#{adminId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER})
+    </insert>
+
+  <select id="selectServicerList"  resultMap="BaseResultMap">
+    SELECT
+      <include refid="Base_Column_List" />
+    FROM
+      security_admin sa
+    Inner JOIN (
+      SELECT
+        sar.admin_id
+      FROM
+        security_admin_role sar
+      LEFT JOIN
+        security_role sr ON sar.role_id = sr.id
+      WHERE
+        sr.`name` = '客服'
+    ) AS aid ON aid.admin_id = sa.id
+    where 1=1
+      <if test="name !=null and name !=''">
+        and sa.username = #{name,jdbcType = VARCHAR}
+      </if>
+      <if test="status !=null">
+        and sa.work_stauts = #{status,jdbcType = INTEGER}
+      </if>
+  </select>
+
+</mapper>

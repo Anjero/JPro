@@ -1,0 +1,11 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_content)
+<div class="well">
+    <div class="alert alert-success">
+        $errorMsg
+
+    </div>
+</div>
+#end
+#define($itemjavascript)
+#end

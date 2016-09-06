@@ -1,0 +1,59 @@
+#set($layout = "layout/admin/admin.vm")
+#define($navActive)admin-auth#end
+#define($admin_content)
+<div class="content">
+    <div class="open-breadcrumb">
+        <strong>
+            <a #">安全设置</a>
+        </strong>
+        <span> &nbsp;&gt;&nbsp;</span>
+        <strong>
+            <a #">权限管理</a>
+        </strong>
+        <span> &nbsp;&gt;&nbsp;<a
+                #">添加</a>
+    </span>
+    </div>
+    <form class="form-horizontal" action="save" method="post">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="displayName">权限名称</label>
+                <input id="displayName" name="displayName" type="text"
+                       placeholder="权限名称" class="pure-input-1-2"/>
+            </div>
+            <div class="pure-control-group">
+                <label for="name">权限标识</label>
+                <input id="name" name="name" type="text"
+                       placeholder="权限标识" class="pure-input-1-2"/>
+            </div>
+            <div class="pure-control-group">
+                <label for="url">权限URL</label>
+                <input id="url" name="url" type="text"
+                       placeholder="url" class="pure-input-1-2"/>
+            </div>
+            <div class="pure-control-group">
+                <label for="displayIndex">显示顺序</label>
+                <input id="displayIndex" name="displayIndex" type="text"
+                       value="$displayIndex" class="pure-input-1-2"/>
+            </div>
+            <div class="pure-control-group">
+                <label for="pid">父权限ID</label>
+                <input id="pid" name="pid" type="text"
+                       value="$pid" placeholder="" class="pure-input-1-2"/>
+            </div>
+            <div class="pure-control-group">
+                <button type="submit" class="pure-button pure-button-primary open-right">提交</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+#end
+#define($!admin_js)
+<script>
+    $(document).ready(function () {
+        $("#security-li").addClass("active open");
+        $("#security-li ul").show();
+        $("#security-li-auth").addClass("active");
+    });
+</script>
+#end

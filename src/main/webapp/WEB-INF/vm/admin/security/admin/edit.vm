@@ -1,0 +1,175 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_breadcrumb)
+<li><a href="#">安全设置</a> <span class="divider">/</span></li>
+<li><a href="#springUrl('')/admin/security/adminuser/add">后台用户</a> <span class="divider">/</span></li>
+<li class="active">编辑</li>
+#end
+#define($admin_content)
+<div class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box ">
+                <div class="box-header with-border">
+                    <h3 class="box-title">编辑用户</h3>
+                </div>
+                <form class="" action="update" method="post">
+                    <fieldset class="box-body">
+
+                        <div class="form-group">
+                            <label class="control-label" for="username">用户名</label>
+
+                            <div class="controls">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="用户名"
+                                       value="$admin.username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password">密码</label>
+
+                            <div class="controls">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="密码"
+                                       value="$admin.password">
+
+                                <p><label style="color: #ff0000;display: none" id="mostCode"></label></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="inputName">角色</label>
+                            <div class="" style="padding-left: 30px;">
+                                #foreach( $role in $roles )
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="role$!role.id" name="role" value="$role.id"/>
+                                        $role.name
+                                    </label>
+                                #end
+
+                            </div>
+                        </div>
+                    ##        <div class="control-group" id="proCheck" style="display: none;">
+                    ##            <label class="control-label" for="dealer">所属省份城市</label>
+                    ##
+                    ##            <div class="controls">
+                    ##                <select id="province" name="province">
+                    ##                    <option value="0">省份</option>
+                    ##                    #foreach($pro in $provinces)
+                    ##                        <option value="$pro.regionId">$pro.cname</option>
+                    ##                    #end
+                    ##                </select>
+                    ##                <select id="city" name="city">
+                    ##                    <option value="0">城市</option>
+                    ##                </select>
+                    ##            </div>
+                    ##        </div>
+                    ##        <div class="control-group" id="dealerCheck" style="display: none;">
+                    ##            <label class="control-label" for="dealer">经销商权限</label>
+                    ##
+                    ##            <div class="controls" id="user_dealers">
+                    ##            </div>
+                    ##        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="submit" class="btn btn-success">提交</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+#end
+#define($admin_js)
+<script>
+    $(document).ready(function () {
+        $("#security-li").addClass("active open");
+        $("#security-li ul").show();
+        $("#security-li-user").addClass("active");
+    });
+</script>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $("input:radio").click(function () {
+            var typeChecked = $("input:radio[id='typeDealer']").is(":checked");
+            if (typeChecked) {
+                $("#dealerCheck").show();
+                $("#proCheck").show();
+            } else {
+                $("#dealerCheck").hide();
+                $("#proCheck").hide();
+            }
+        });
+
+        var ids = $("input[name='role']");
+        ids.each(function () {
+            #foreach( $role in $adminRoles )
+                if ('$role.id' == $(this).val()) {
+                    $(this).attr("checked", 'true');
+                }
+            #end
+        });
+
+        var ids = $("input[name='venderIds']");
+        ids.each(function () {
+            #foreach( $avid in $adminVenders )
+                if ('$avid.dealerId' == $(this).val()) {
+                    $(this).attr("checked", 'true');
+                }
+            #end
+        });
+
+        $("#province").change(function () {
+            //readDealer('pro', $(this).val());
+        });
+
+        $("#city").change(function () {
+            //readDealer('city', $(this).val());
+
+
+        });
+
+        if ($!admin.type==1
+        )
+        {
+            $("#dealerCheck").show();
+            $("#province").val(310000);
+            //readDealer('pro', 310000);
+
+        }
+
+        #if($admin.type==1)
+            $("#typeDealer").click();
+            $("#dealerCheck").show();
+            $("#proCheck").show();
+        #end
+    });
+
+    ##    function readDealer(type, id) {
+    ##        $.ajax({
+    ##            url: '#springUrl('')/admin/common/d/location',
+    ##            async: false,
+    ##            cache: false,
+    ##            dataType: "json",
+    ##            type: 'get',
+    ##            data: {
+    ##                if(type == "pro" )
+    ##        {
+    ##            p: id
+    ##        }
+    ##    else
+    ##        {
+    ##            c: id
+    ##        }
+    ##    }
+    ##    ,
+    ##    success: function (json) {
+    ##        $("#user_dealers").empty();
+    ##        for (i = 0; i < json.result.length; i++) {
+    ##            $("#user_dealers").append("<div class='span6'> <label class='checkbox'><input type='checkbox' id='dealerId" + json.result[i].id
+    ##                    + "' name='dealerId' value='" + json.result[i].id + "'/>" + json.result[i].name + "</label></div>");
+    ##        }
+    ##    }
+    ##    })
+    ##    ;
+    ##    }
+</script>
+#end

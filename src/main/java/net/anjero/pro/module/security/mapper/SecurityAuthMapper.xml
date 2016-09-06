@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.anjero.pro.module.security.mapper.SecurityAuthMapper">
+    <resultMap id="BaseResultMap" type="net.anjero.pro.module.security.pojo.SecurityAuth">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="display_name" property="displayName" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="pid" property="pid" jdbcType="INTEGER"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="display_index" property="displayIndex"
+                jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and
+                                    #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem"
+                                             open="(" close=")" separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria"
+                     separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and
+                                    #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem"
+                                             open="(" close=")" separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+        id, display_name, name, pid, url, display_index
+    </sql>
+    <select id="selectByExample" resultMap="BaseResultMap"
+            parameterType="net.anjero.pro.module.security.pojo.SecurityAuthExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from security_auth
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+        <if test="limitStart >= 0">
+            limit ${limitStart} , ${limitEnd}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap"
+            parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from security_auth
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from security_auth
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <delete id="deleteByExample"
+            parameterType="net.anjero.pro.module.security.pojo.SecurityAuthExample">
+        delete from security_auth
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="net.anjero.pro.module.security.pojo.SecurityAuth">
+        <selectKey resultType="java.lang.Integer" keyProperty="id"
+                   order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into security_auth (display_name, name, pid,
+        url, display_index)
+        values (#{displayName,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+        #{pid,jdbcType=INTEGER},
+        #{url,jdbcType=VARCHAR}, #{displayIndex,jdbcType=INTEGER})
+    </insert>
+    <insert id="insertSelective" parameterType="net.anjero.pro.module.security.pojo.SecurityAuth">
+        <selectKey resultType="java.lang.Integer" keyProperty="id"
+                   order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into security_auth
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="displayName != null">
+                display_name,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="pid != null">
+                pid,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="displayIndex != null">
+                display_index,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="displayName != null">
+                #{displayName,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="pid != null">
+                #{pid,jdbcType=INTEGER},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="displayIndex != null">
+                #{displayIndex,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample"
+            parameterType="net.anjero.pro.module.security.pojo.SecurityAuthExample"
+            resultType="java.lang.Integer">
+        select count(*) from security_auth
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update security_auth
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=INTEGER},
+            </if>
+            <if test="record.displayName != null">
+                display_name = #{record.displayName,jdbcType=VARCHAR},
+            </if>
+            <if test="record.name != null">
+                name = #{record.name,jdbcType=VARCHAR},
+            </if>
+            <if test="record.pid != null">
+                pid = #{record.pid,jdbcType=INTEGER},
+            </if>
+            <if test="record.url != null">
+                url = #{record.url,jdbcType=VARCHAR},
+            </if>
+            <if test="record.displayIndex != null">
+                display_index = #{record.displayIndex,jdbcType=INTEGER},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update security_auth
+        set id = #{record.id,jdbcType=INTEGER},
+        display_name = #{record.displayName,jdbcType=VARCHAR},
+        name = #{record.name,jdbcType=VARCHAR},
+        pid = #{record.pid,jdbcType=INTEGER},
+        url = #{record.url,jdbcType=VARCHAR},
+        display_index = #{record.displayIndex,jdbcType=INTEGER}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="net.anjero.pro.module.security.pojo.SecurityAuth">
+        update security_auth
+        <set>
+            <if test="displayName != null">
+                display_name = #{displayName,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="pid != null">
+                pid = #{pid,jdbcType=INTEGER},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="displayIndex != null">
+                display_index = #{displayIndex,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="net.anjero.pro.module.security.pojo.SecurityAuth">
+        update security_auth
+        set display_name = #{displayName,jdbcType=VARCHAR},
+        name = #{name,jdbcType=VARCHAR},
+        pid = #{pid,jdbcType=INTEGER},
+        url = #{url,jdbcType=VARCHAR},
+        display_index = #{displayIndex,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <select resultMap="BaseResultMap"
+            parameterType="net.anjero.pro.module.security.pojo.SecurityAuthExample"
+            id="selectByExampleWithRowbounds">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from security_auth
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+
+
+    <sql id="Alias_Column_List">
+        a. id, a.display_name, a.name, a.pid, a.url, a.display_index
+    </sql>
+    <select resultMap="BaseResultMap" parameterType="java.lang.Integer" id="selectByRole">
+        select
+        <include refid="Alias_Column_List"/>
+        from security_auth a left join security_role_auth ra on
+        ra.auth_id=a.id
+        where ra.role_id=#{id,jdbcType=INTEGER}
+    </select>
+
+    <select resultMap="BaseResultMap" parameterType="java.lang.Integer" id="selectByAdmin">
+        select
+        <include refid="Alias_Column_List"/>
+        from security_auth a left join security_role_auth ra on
+        ra.auth_id=a.id left join security_admin_role ar on ra.role_id=ar.role_id
+        where ar.admin_id=#{id,jdbcType=INTEGER}
+    </select>
+</mapper>

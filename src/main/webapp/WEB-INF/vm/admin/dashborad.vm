@@ -1,0 +1,16 @@
+#set($layout = "layout/admin/admin.vm")
+#define($navActive)admin-role#end
+#define($admin_content)
+
+<section class="content-header">
+    <h1>
+        Dashboard
+        <small>Control panel</small>
+    </h1>
+    </ol>
+</section>
+<section class="content">
+    主面板
+</section>
+
+#end

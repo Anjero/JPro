@@ -1,0 +1,81 @@
+#set($layout = "layout/admin/login.vm")
+#define($login_content)
+
+<p class="login-box-msg">登录</p>
+
+<form action="admin/security_check" method="post">
+    <div class="form-group has-feedback">
+        <input type="text" class="form-control" id="j_username" name="j_username" placeholder="用户名">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+    </div>
+    <div class="form-group has-feedback">
+        <input type="password" class="form-control" id="j_password" name="j_password" placeholder="密码">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+    </div>
+    <div class="form-group has-feedback">
+        <div class="block input-icon input-icon-right " style="height: 40px;">
+            <input id="code" name="code"
+                   class="form-control" type="text" maxlength="4"
+                   placeholder="验证码" style="width: 140px;float: left"/>
+            <span style="float: right;">
+                <img id="imgObj" alt="验证码" src="code.html"
+                     onclick="changeImg()"/>
+                <a href="#" onclick="changeImg()">
+                    <i class="ace-icon fa fa-refresh"></i></a>
+                </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8">
+            <div class="checkbox icheck">
+                <label>
+                    <input id="_spring_security_remember_me"
+                           name="_spring_security_remember_me" type="checkbox" class="ace"
+                           value="true"/>
+                    <span class="lbl">记住我</span>
+                </label>
+            </div>
+            #if($!error)
+                <p>
+                    <font style="color:red">$!{SPRING_SECURITY_LAST_EXCEPTION.message}</font>
+                </p>
+            #else
+                <p>
+                    &nbsp;
+                </p>
+            #end
+
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                <i class="ace-icon fa fa-key"></i>
+                <span class="bigger-110">登 录</span>
+            </button>
+        </div>
+        <!-- /.col -->
+    </div>
+</form>
+<!-- /.social-auth-links -->
+<a href="#">忘记密码</a><br>
+
+<script type="text/javascript">
+    function changeImg() {
+        var imgSrc = $("#imgObj");
+        var src = imgSrc.attr("src");
+        imgSrc.attr("src", chgUrl(src));
+    }
+    //时间戳
+    //为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳
+    function chgUrl(url) {
+        var timestamp = (new Date()).valueOf();
+        url = url.substring(0, 17);
+        if ((url.indexOf("&") >= 0)) {
+            url = url + "×tamp=" + timestamp;
+        } else {
+            url = url + "?timestamp=" + timestamp;
+        }
+        return url;
+    }
+</script>
+#end

@@ -1,0 +1,9 @@
+#set($layout = "layout/admin/admin.vm")
+#define($navActive)nav_index#end
+#define($admin_content)
+<div class="hero-unit">
+    <h1>车映商用数据平台</h1>
+    <p>欢迎进入本系统</p>
+
+</div>
+#end

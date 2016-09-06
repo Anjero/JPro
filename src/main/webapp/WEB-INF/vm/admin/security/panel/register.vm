@@ -1,0 +1,310 @@
+#set($layout = "layout/admin/login.vm")
+
+#define($login_content)
+    #parse('vm/admin/common/member_js.vm')
+<div class="main-content">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <div class="login-container" style="width: 500px">
+                <div class="center">
+                    <h1>
+                        <span class="red">#company()</span>
+                        <span class="white" id="id-text2">#projectName()</span>
+                    </h1>
+                </div>
+                <div class="space-6"></div>
+                <div class="position-relative">
+                    <div id="signup-box" class="signup-box visible widget-box no-border" >
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <h4 class="header green lighter bigger">
+                                    <i class="ace-icon fa fa-users blue"></i>
+                                    新会员注册
+                                </h4>
+
+                                <div class="space-6"></div>
+                                <form  class="form-horizontal" id="registerForm" >
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="companyName"> 公司名称: </label>
+                                            <div class="col-sm-8">
+                                                <input style="width: 200px;" type="text"  placeholder="请输入公司名称" id="companyName" name="companyName" onblur="companyNameBlur();">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="invoiceUnit">  公司类型: </label>
+                                            <div class="radio-inline">
+                                                <label>
+                                                    <input name="companyType" checked classs="validateForm" type="radio"  class="ace" id="4sShop" value="1">
+                                                    <span class="lbl"> 4S店</span>
+                                                </label>
+                                                <label>
+                                                    <input name="companyType" type="radio" class="ace" id="secondDealer" value="2">
+                                                    <span class="lbl"> 二级经销商</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="brand">  经营品牌: </label>
+                                            <div class="col-sm-8">
+                                                <select id="brand"  name="brand"  style="width:150px;" onchange="getManufacturer()" onblur="brandBlur();">
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="manufacturerName">  厂商: </label>
+                                            <div class="col-sm-8" id="manufacturer">
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="provinceCode"> 销售区域: </label>
+                                            <div class="col-sm-8">
+                                                <select id="provinceCode"  name="provinceCode" style="width:150px;" onblur="provinceCodeBlur();">
+                                                    <option value="">请选择</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="businessLicense"> 营业执照号码: </label>
+                                            <div class="col-sm-8">
+                                                <input style="width: 200px" type="text"  placeholder="请输入营业执照号码" id="businessLicense" name="businessLicense" onblur="businessLicenseBlur();">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="businessLicensePhoto">营业执照图片: </label>
+                                            <div class="col-sm-8">
+                                                <input type="file" id="businessLicensePhoto" name="businessLicensePhoto" style="width: 200px;margin-top: 5px" onblur="businessLicensePhotoBlur();">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="usePersonName">  使用人姓名: </label>
+                                            <div class="col-sm-8">
+                                                <input style="width: 200px" type="text"  placeholder="请输入使用人姓名" id="usePersonName" name="usePersonName" onblur="usePersonNameBlur();">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="usePersonPhone"> 使用人手机: </label>
+                                            <div class="col-sm-8">
+                                                <input  style="width: 200px" type="text"  placeholder="请输入使用人手机" id="usePersonPhone" name="usePersonPhone" onblur="phoneBlur();">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label no-padding-right" for="phoneVerificationCode"> 手机验证码: </label>
+                                            <div class="col-sm-8">
+                                                <input style="width: 70px" class="col-sm-8" type="text" placeholder="验证码" id="phoneVerificationCode" name="phoneVerificationCode">
+                                                <div class="col-sm-4">
+                                                    <input type="button"  value="获取短信验证码" class="btn btn-default btn-sm" id="verificationCode" onclick="getPhoneVerificationCode(this,0)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-4"></div>
+                                            <div class="col-sm-8">
+                                                <button type="button" id="submitQueryButton" class="width-40 btn btn-sm btn-success" onclick="submitForm()">
+                                                    <span class="bigger-110">提交注册</span>
+
+                                                    <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                                                </button>
+                                                <font size="2px" color="red" id="msg">$!{msg}</font>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="toolbar center">
+                                <a href="#" data-target="#login-box" class="back-to-login-link">
+                                    <a href="#springUrl('/')" class="back-to-login-link">
+                                        <i class="ace-icon fa fa-arrow-left"></i>
+                                        登 录
+                                    </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="center">
+                        <span class="bigger-120 blue">
+							Copyright&copy;datayin.com &nbsp; All Right Reserved <br/> 沪ICP备16007128号-1
+						</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+##<div id="winpop">
+##    <div class="title">消息提示！<span class="close" onclick="tips_pop()">×</span></div>
+##    <div class="con">提交成功,请耐心等待后台审核,审核结果将以短信发送至联系人手机,请注意查收!</div>
+##</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        getBrand();
+        getProvince();
+
+    });
+
+
+    function submitForm() {
+        var ext = '.jpg.jpeg.gif.bmp.png.';
+        var companyName = $("#companyName").val();
+        var companyType = $('input:radio:checked').val();
+        var brand = $('#brand option:selected') .val();//选中的品牌值
+        var obj = document.getElementsByName("manufacturerName");//选择所有name="manufacturerName"的对象，返回数组
+        var manufacturerName='';//如果这样定义var s;变量s中会默认被赋个null值
+        for(var i=0;i<obj.length;i++) {
+            if (obj[i].checked) {//取到对象数组后，我们来循环检测它是不是被选中
+                if(i != obj.length - 1){
+                    manufacturerName += obj[i].value + ',';   //如果选中，将value添加到变量s中
+                }else{
+                    manufacturerName += obj[i].value ;   //如果选中，将value添加到变量s中
+                }
+            }
+        }
+        var provinceCode = $('#provinceCode option:selected') .val();//选中的省市
+        var businessLicense = $("#businessLicense").val();
+        var usePersonName = $("#usePersonName").val();
+        var usePersonPhone = $("#usePersonPhone").val();
+        var businessLicensePhoto = $("#businessLicensePhoto").val();
+
+        $(".validateForm").removeClass("validateForm");
+        $("#msg").html("");
+
+        if (!isNull(companyName)) {
+            $("#companyName").attr("class","validateForm");
+        }
+        if (!isNull(brand)) {
+            $("#brand").attr("class","validateForm");
+
+        }
+        if (!isNull(provinceCode)) {
+            $("#provinceCode").attr("class","validateForm");
+
+        }
+        if (!isNull(businessLicense)) {
+            $("#businessLicense").attr("class","validateForm");
+
+        }
+        if(!isNull(usePersonName)){
+            $("#usePersonName").attr("class","validateForm");
+
+        }
+        if(!isNull(usePersonPhone)){
+            $("#usePersonPhone").attr("class","validateForm");
+
+        }
+
+        if(!isNull(businessLicensePhoto)){
+            $("#businessLicensePhoto").attr("class","validateForm");
+
+        }
+        var isValid = phoneBlur();
+        if(!isValid){
+            return false;
+        }
+        if(!isNull(companyName) || !isNull(brand) || !isNull(manufacturerName) || !isNull(provinceCode) || !isNull(businessLicense) || !isNull(usePersonName) || !isNull(usePersonPhone) || !isNull(businessLicensePhoto)){
+            return false;
+        }
+
+        var phoneVerificationCodeInput = $("#phoneVerificationCode").val();
+        $.ajax({
+            url:  '#springUrl('')/verify',
+            async: true,
+            cache: false,
+            type: 'post',
+            dataType: "json",
+            data: {
+                phoneVerificationCodeInput:phoneVerificationCodeInput
+            },
+            success: function (data) {
+                if(data == 0){
+                    $("#msg").html("验证码不正确!");
+                }else if(data == -1){
+                    $("#msg").html("验证码已过期!请重新获取!");
+                }else{
+                    businessLicensePhoto = businessLicensePhoto.substr(businessLicensePhoto.lastIndexOf('.') + 1).toLowerCase();
+                    if (ext.indexOf('.' + businessLicensePhoto + '.') == -1) {
+                        $("#msg").html("图片格式不正确!");
+                        return false;
+                    }
+
+                    var optionsdata = {
+                        url: '#springUrl('')/member/upload/deposite/img',
+                        secureuri: false,
+                        fileElementId: 'businessLicensePhoto',
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.code == 200) {
+                                registerMember(data.detail.path, data.detail.compressPath,companyName,companyType,brand,manufacturerName,provinceCode,
+                                        businessLicense,usePersonName,usePersonPhone);
+                            } else {
+                                return false;
+                            }
+                        },
+                        error: function (data, status, e) {
+                            $("#msg").html("上传控件报错!");
+                            return false;
+                        }
+                    };
+                    return $.ajaxFileUpload(optionsdata);
+                }
+            }
+        });
+    }
+
+
+
+    function registerMember(img, showImg,companyName,companyType,brand,manufacturerName,provinceCode,
+                            businessLicense,usePersonName,usePersonPhone) {
+
+        $.ajax({
+            url: "#springUrl('')/registerMember",
+            async: false,
+            cache: false,
+            type: 'post',
+            dataType: "html",
+            data: {
+                companyName: companyName,
+                companyType:companyType,
+                brand: brand,
+                manufacturerName: manufacturerName,
+                provinceCode: provinceCode,
+                businessLicense: businessLicense,
+                usePersonName: usePersonName,
+                usePersonPhone: usePersonPhone,
+                img:img,
+                showImg:showImg
+            },
+            success: function (data) {
+                var timeButton = $("#verificationCode");
+                clearTimeout(timeOver);
+                timeButton.removeAttr("disabled");
+                timeButton.val("获取短信验证码");
+//                document.getElementById('winpop').style.height='0px';
+//                setTimeout("tips_pop()",0);//3秒后调用tips_pop()这个函数
+
+                $.gritter.add({
+                    title: '消息提示!',
+                    text: '提交成功,请耐心等待后台审核,审核结果将以短信发送至联系人手机,请注意查收!',
+                    position: 'bottom-right',
+                    class_name: 'gritter-success'
+                });
+
+                document.getElementById("registerForm").reset();
+            }
+        });
+    }
+
+
+
+</script>
+
+#end
+
+
+

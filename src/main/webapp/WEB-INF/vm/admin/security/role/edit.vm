@@ -1,0 +1,67 @@
+#set($layout = "layout/admin/admin.vm")
+#define($navActive)admin-role#end
+#define($admin_content)
+
+
+<link rel="stylesheet" href="#staticUrl("/")dtree/dtree.css"/>
+
+<script src="http://192.168.16.252:8010/cheshell-bi/static/dtree/dtree.js"></script>
+
+<div class="content">
+    <div class="box">
+        <div class="box-body">
+            <form class="form-horizontal" action="update" method="post">
+                <fieldset class="span6">
+                    <legend>角色修改</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="name">角色名称</label>
+
+                        <div class="controls">
+                            <input id="name" name="name" type="text" placeholder="角色名称" value="$role.name"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="auth">权限</label>
+
+                        <div class="controls">
+                            <div id="content">
+                                <script type="text/javascript">
+                                    d = new dTree('d');
+                                    d.config.check = true;
+                                    d.config.name = "auth";
+                                        #foreach( $auth in $auths )
+                                        d.add($auth.id,$auth.pid , '$auth.displayName', '#');
+                                        #end
+                                    document.write(d);
+                                        #foreach( $auth in $roleAuths )
+                                        d.check(
+                                            $auth.id,
+                                                true);
+                                        #end
+                                    d.closeAll();
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                            <button type="reset" class="btn">Cancel</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+#end
+#define($admin_js)
+<script>
+    $(document).ready(function () {
+        $("#security-li").addClass("active open");
+        $("#security-li ul").show();
+        $("#security-li-role").addClass("active");
+    });
+</script>
+#end

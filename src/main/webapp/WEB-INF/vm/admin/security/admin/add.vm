@@ -1,0 +1,140 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_content)
+<div class="content">
+    <form class="form-horizontal" action="save" method="post">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="username">用户名</label>
+
+                <div class="controls">
+                    <input type="text" id="username" name="username" placeholder="用户名">
+
+                    <p><label style="color: #ff0000;display: none" id="mostCode"></label></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">密码</label>
+
+                <div class="controls">
+                    <input type="text" id="password" name="password" placeholder="密码">
+
+                    <p><label style="color: #ff0000;display: none" id="mostCode"></label></p>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="password">用户类型</label>
+                <div class="controls">
+                    <label class="radio">
+                        <input type="radio" name="type" id="typeAdmin" value="0"/>超级管理员
+                    </label>
+                    <label class="radio" id="dealerType">
+                        <input type="radio" name="type" id="typeDealer" value="1"/>经销商
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="type" id="typeOther" value="2"/>其它
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputName">角色</label>
+
+                <div class="controls">
+                    #foreach( $role in $roles )
+                        <label class="checkbox">
+                            <input type="checkbox" id="role$!role.id" name="role" value="$role.id"/>
+                            $role.name
+                        </label>
+                    #end
+
+                </div>
+            </div>
+            <div class="control-group" id="dealerCheck" style="display: none;">
+                <label class="control-label" for="dealer">经销商权限</label>
+                <div class="controls">
+                    <select id="province" name="province">
+                        <option value="0">省份</option>
+                        #foreach($pro in $provinces)
+                            <option value="$pro.regionId">$pro.cname</option>
+                        #end
+                    </select>
+                    <select id="city" name="city">
+                        <option value="0">城市</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="row" id="user_dealers">
+
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-success btn-flat">提交</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+#end
+#define($admin_js)
+<script>
+    $(document).ready(function () {
+        $("#security-li").addClass("active open");
+        $("#security-li ul").show();
+        $("#security-li-user").addClass("active");
+
+        $("input:radio").click(function() {
+            var typeChecked = $("input:radio[id='typeDealer']").is(":checked");
+            if(typeChecked){
+                $("#dealerCheck").show();
+            }else{
+                $("#dealerCheck").hide();
+            }
+        });
+
+        $("#province").change(function () {
+            $.ajax({
+                url: '#springUrl('')/admin/common/d/location',
+                async: false,
+                cache: false,
+                dataType: "json",
+                type: 'get',
+                data: {
+                    p: $(this).val()
+                },
+                success: function (json) {
+                    $("#user_dealers").empty();
+                    for (i = 0; i < json.result.length; i++) {
+                        $("#user_dealers").append("<div class='span6'> <label class='checkbox'><input type='checkbox' id='dealerId" + json.result[i].id
+                                + "' name='dealerId' value='" + json.result[i].id + "'/>" + json.result[i].name + "</label></div>");
+                    }
+                }
+            });
+
+            $("#city").change(function () {
+                $.ajax({
+                    url: '#springUrl('')/admin/common/d/location',
+                    async: false,
+                    cache: false,
+                    dataType: "json",
+                    type: 'get',
+                    data: {
+                        c: $(this).val()
+                    },
+                    success: function (json) {
+                        $("#user_dealers").empty();
+                        for (i = 0; i < json.result.length; i++) {
+                            $("#user_dealers").append("<div class='span6'><label class='checkbox'><input type='checkbox' id='dealerId" + json.result[i].id
+                                    + "' name='dealerId' value='" + json.result[i].id + "'/>" + json.result[i].name + "</label></div>");
+                        }
+                    }
+                });
+            });
+
+        });
+    });
+</script>
+#end
+

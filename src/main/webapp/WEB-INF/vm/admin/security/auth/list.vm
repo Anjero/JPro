@@ -1,0 +1,84 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_breadcrumb)
+<li><a href="#">安全设置</a></li>
+<li><a href="#">权限管理</a></li>
+<li><a href="#">列表</a></li>
+#end
+#define($admin_content)
+<link rel="stylesheet" href="#staticUrl("/")dtree/dtree.css"/>
+<script src="#staticUrl("/")dtree/dtree.js"></script>
+<div class="content">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="box" style="min-height: 500px;">
+                <div class="box-header">
+                    <h3 class="box-title">权限树</h3>
+                </div>
+                <div class="box-body">
+                    <p>
+                        <a href="javascript: d.openAll();">打开全部</a>
+                        | <a href="javascript: d.closeAll();">关闭</a>
+                    </p>
+                    <script type="text/javascript">
+                        d = new dTree('d');
+                            #foreach( $auth in $auths )
+                            d.add($auth.id,$auth.pid , '$auth.displayName', 'list?pid=$auth.id');
+                            #end
+                        document.write(d);
+                        d.closeAll();
+                        d.openTo($id, true);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">权限详情</h3>
+                </div>
+                <div class="box-body">
+                    <a href="#springUrl('/admin/security/auth/add')?pid=$id"
+                       class="btn btn-info btn-xs pull-right">添加</a>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>权限名称</th>
+                            <th>权限标识</th>
+                            <th>权限URL</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #foreach( $auth in $list )
+                            <tr #if($velocityCount%2==1)class="pure-table-odd"#end>
+                                <td>$auth.displayName</td>
+                                <td>$auth.name</td>
+                                <td>$auth.url</td>
+                                <td>
+                                    <a class="btn bg-olive btn-flat margin btn-xs"
+                                       href="#springUrl('')/admin/security/auth/$auth.id/edit">修改</a>
+                                    <a class="btn bg-orange btn-flat margin btn-xs"
+                                       href="javascript:if(confirm('确实要删除权限{$auth.name}吗?'))location='#springUrl(
+                                           '')/admin/security/auth/$auth.id/delete'">删除</a>
+                                </td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#end
+#define($admin_js)
+
+<script>
+    $(document).ready(function () {
+        $("#security-li").addClass("active open");
+        $("#security-li ul").show();
+        $("#security-li-auth").addClass("active");
+    });
+</script>
+#end

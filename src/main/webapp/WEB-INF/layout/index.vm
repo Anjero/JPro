@@ -1,0 +1,14 @@
+#* @velocityproperties path="../../../resource/velocity.properties" runtime_root="../../WEB-INF" *#
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>$!vm_title</title>
+    $!vm_css
+</head>
+<body>
+<article>
+    <section>$!vm_content</section>
+</article>
+</body>
+</html>

@@ -1,0 +1,112 @@
+#set($layout = "layout/admin/admin.vm")
+
+#define($admin_breadcrumb)
+<li>用户列表</li>
+#end
+#define($admin_content)
+
+<section class="content-header">
+    <h1>
+        账户列表
+        <small>权限账户列表</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> dashboard</a></li>
+        <li class="active">账户列表</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="form-group" action="#springUrl('/')admin/security/adminuser/list" method="post">
+        <form class="form-inline">
+            <label class="" for="username"> 账户:</label>
+            <input style="width: 120px" type="text" id="username" name="username">
+            <label class="" for="userStatus"> 账户状态:</label>
+            <select id="userStatus" name="userStatus" style="width:100px;">
+                <option value="">请选择</option>
+                <option value="0">停用</option>
+                <option value="1">启用</option>
+            </select>
+            <button type="submit" class="btn btn-info btn-sm" style="height: 30px;" onchange="query()">
+                查 询
+            </button>
+        </form>
+    </div>
+
+    <div class="open-breadcrumb">
+        <div class="open-right">
+            <a href="#springUrl('/admin/security/adminuser/add')" class="btn btn-info btn-xs pull-right btn-flat">添加</a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-body">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>用户名</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    #foreach( $map in $page.list )
+                    <tr #if($velocityCount%2==1)class="pure-table-odd"#end>
+                        <td>$map.username</td>
+                        <td>
+                            <a class="btn btn-info btn-xs btn-flat"
+                               href="#springUrl('')/admin/security/adminuser/$map.id/edit">修改</a>
+                            #if($!map.isEnable ==1)
+                                <a class="btn btn-danger btn-xs btn-flat"
+                                   href="javascript:if(confirm('确实要停用用户{$map.username}吗?'))location='#springUrl(
+                                       '')/admin/security/adminuser/$map.id/isEnable?isEnable=0'">停用</a>
+                            #elseif($!map.isEnable ==0)
+                                <a class="btn btn-success btn-xs btn-flat"
+                                   href="javascript:if(confirm('确实要启用用户{$map.username}吗?'))location='#springUrl(
+                                       '')/admin/security/adminuser/$map.id/isEnable?isEnable=1'">启用</a>
+                            #end
+                        ##                <a class="btn btn-danger btn-xs"
+                        ##                   href="javascript:if(confirm('确实要删除用户{$admin.username}吗?'))location='#springUrl('')/admin/security/adminuser/$admin.id/delete'">删除</a>
+                        </td>
+                    </tr>
+                    #end
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="hr hr-10 dotted"></div>
+
+    <div class="page">
+        <p class="floating">一共$page.pages 页 ，当前第$page.pageNum 页，共$page.total 条</p>
+
+        <div id="page"></div>
+    </div>
+</section>
+#end
+
+#define($admin_js)
+<script>
+    $(document).ready(function () {
+        $("#security-li").addClass("active open");
+        $("#security-li ul").show();
+        $("#security-li-user").addClass("active");
+
+        $("#username").val('$!{username}');
+        $("#userStatus").val('$!{userStatus}');
+
+        var username = $('#username').val();
+        var userStatus = $('#userStatus option:selected').val();
+
+        var options = {
+            currentPage:$page.pageNum,
+            totalPages: $page.pages,
+            numberOfPages: 5,
+            alignment: 'right',
+            pageUrl: function (type, page, total) {
+                return "#springUrl(
+                            '/')admin/security/adminuser/list?username=" + username + "&userStatus=" + userStatus + "&pageNum=" + page;
+            }
+        }
+        $('#page').bootstrapPaginator(options);
+    });
+</script>
+#end

@@ -1,0 +1,16 @@
+#* @velocityproperties path="../../../resource/velocity.properties" runtime_root="../../WEB-INF" *#
+<!doctype html>
+<html>
+	<head>
+		<title>$!vm_title</title>
+	</head>
+	<body>
+		<article>
+			<header>Header!</header>
+			<h1>simple hello template</h1>
+            <a href="#springUrl('/adminlogin')">登录</a>
+			<section>$!vm_content</section>
+			<footer>Footer!</footer>
+		</article>
+	</body>
+</html>

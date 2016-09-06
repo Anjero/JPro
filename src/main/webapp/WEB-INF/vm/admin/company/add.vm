@@ -1,0 +1,60 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_content)
+
+<section class="content-header">
+    <h1>
+        Conmpnay
+        <small>网站添加</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/admin/dashboard"><i class="fa fa-dashboard"></i> 主面板</a></li>
+        <li><a href="/admin/company/index">网站</a></li>
+        <li class="active">添加</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Quick Example</h3>
+                </div>
+                <form method="post">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="companyName">公司名称</label>
+                            <input type="text" class="form-control" id="companyName" name="company" placeholder="公司名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">网站</label>
+                            <input type="text" class="form-control" id="website" name="website" placeholder="网站">
+                        </div>
+                        <div class="form-group">
+                            <label for="identifyName">唯一识别码</label>
+                            <input type="text" class="form-control" id="identifyName" name="identifyName"
+                                   placeholder="唯一识别码">
+                        </div>
+                        <div class="form-group">
+                            <label>状态</label>
+                            <select name="status" class="form-control">
+                                <option value="199">试用</option>
+                                <option value="200">正常</option>
+                                <option value="202">锁定</option>
+                                <option value="201">异常</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-info">添加</button>
+                        <button type="button" class="btn btn-default">返回</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+
+</section>
+#end

@@ -1,0 +1,40 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_content)
+    #if($errorMsg)
+    <div class="alert alert-error">
+        $!errorMsg
+    </div>
+    #end
+<form class="form-horizontal" action="#springUrl('/admin/setting/pwd/update')" method="post">
+    <fieldset>
+        <div class="control-group">
+            <label class="control-label" for="password">原密码</label>
+
+            <div class="controls">
+                <input type="password" id="oldpassword" name="oldpassword" placeholder="原密码">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="newpassword">新密码</label>
+
+            <div class="controls">
+                <input type="password" id="newpassword" name="newpassword" placeholder="">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="newpassword1">确认新密码</label>
+
+            <div class="controls">
+                <input type="password" id="newpassword1" name="newpassword1" placeholder="">
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button style="submit" class="btn btn-primary">修改</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+#end
+#define($jsContent)
+#end

@@ -1,0 +1,12 @@
+##项目根目录
+#macro( baseUrl $relativeUrl )$base.baseUrl()${relativeUrl}#end
+##静态资源路径
+#macro( staticUrl $relativeUrl )$base.staticUrl()${relativeUrl}#end
+##静态文件版本
+#macro( staticVersion )$base.staticVersion()#end
+##开发者联系邮箱
+#macro( devMail )$base.devMail()#end
+##项目名称
+#macro( projectName )JPro Bata#end
+##公司名
+#macro( company )Anjero#end

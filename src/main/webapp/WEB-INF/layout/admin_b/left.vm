@@ -1,0 +1,276 @@
+<ul class="nav nav-list">
+    <li class="">
+        <a href="#springUrl('/admin/dashboard')">
+            <i class="menu-icon fa fa-tachometer"></i>
+            <span class="menu-text"> 主页 </span>
+        </a>
+
+        <b class="arrow"></b>
+    </li>
+
+    #if($sec.allGranted("customerCenter"))
+        <li class="" id="yhzx-li">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon glyphicon glyphicon-user"></i>
+                <span class="menu-text">用户中心</span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li class="" id="yhlb-li">
+                    <a href="#springUrl('/')admin/mobile/loan_user/list">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        用户列表
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li class="" id="pvuv-li">
+                    <a href="#springUrl('/')admin/mobile/loan_user/list_pv_uv">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        pv_uv列表
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li class="" id="tplsms-li">
+                    <a href="#springUrl('/')admin/mobile/tplSmsContent/page">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        短信模板
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+    #end
+
+    #if($sec.allGranted("customer_call"))
+        <li class="" id="loan-li">
+            <a href="#" class="dropdown-toggle">
+                <i class="menu-icon glyphicon glyphicon-user"></i>
+                <span class="menu-text">客服外呼</span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li class="" id="loan-li-index">
+                    <a href="#springUrl('/')admin/loan/index">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        列表页面
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+    #end
+
+    #if($sec.allGranted("sms"))
+        <li class="" id="sms-li">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon fa fa-exclamation-triangle"></i>
+                <span class="menu-text">短信</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                #if($sec.allGranted("sms-list"))
+                    <li id="sms-list">
+                        <a href="#springUrl('/admin/sms/list')"><i class="menu-icon fa fa-caret-right"></i>发送明细</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+                #if($sec.allGranted("sms-safe"))
+                    <li id="sms-safe">
+                        <a href="#springUrl('/admin/sms/safe')"><i class="menu-icon fa fa-caret-right"></i>安全控制</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+                #if($sec.allGranted("sms-warning"))
+                    <li id="sms-warning">
+                        <a href="#springUrl('/admin/sms/warning')"><i class="menu-icon fa fa-caret-right"></i>预警</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+                #if($sec.allGranted("sms-balance"))
+                    <li id="sms-balance">
+                        <a href="#springUrl('/admin/sms/balance')"><i class="menu-icon fa fa-caret-right"></i>渠道余额查询</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+            </ul>
+        </li>
+    #end
+
+    #if($sec.allGranted("serviceManage"))
+        <li class="" id="serviceManage-li">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon glyphicon glyphicon-user"></i>
+                <span class="menu-text">客服管理</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                <li id="serviceManage-list">
+                    <a href="#springUrl('')/admin/serviceManage/list">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        客服状态
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li id="serviceManage-page">
+                    <a href="#springUrl('')/admin/serviceManage/page">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                       已分配数据
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+    #end
+    #if($sec.allGranted("count"))
+        <li class="" id="count-li">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon glyphicon glyphicon-user"></i>
+                <span class="menu-text">数据统计</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                #if($sec.allGranted("count-loan-log"))
+                    <li id="count-loan-log-list">
+                        <a href="#springUrl('/admin/loan/count/index')"><i class="menu-icon fa fa-caret-right"></i>客服工作分析表</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+            </ul>
+        </li>
+    #end
+    #if($sec.allGranted("loan-option"))
+        <li class="" id="loan-option-li">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon glyphicon glyphicon-user"></i>
+                <span class="menu-text">选项管理</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                #if($sec.allGranted("loan-option-list"))
+                    <li id="loan-option-list">
+                        <a href="#springUrl('/admin/option/list')"><i class="menu-icon fa fa-caret-right"></i>选项列表</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+            </ul>
+        </li>
+    #end
+##polodai navigate bar begin
+
+    #if($sec.allGranted("polodai"))
+        <li class="" id="polodai-li">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon fa fa-file-o"></i>
+                <span class="menu-text">菠萝贷(POLODAI)</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                #if($sec.allGranted("polodai_pay_record"))
+                    <li id="polodai-pay-record-list">
+                        <a href="#springUrl('/admin/polodai/record/pay')"><i class="menu-icon fa fa-caret-right"></i>充值记录</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+                #if($sec.allGranted("polodai_gold_record"))
+                    <li id="polodai-gold-record-list">
+                        <a href="#springUrl('/admin/polodai/record/gold')"><i class="menu-icon fa fa-caret-right"></i>金币变更记录</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+
+
+                #if($sec.allGranted("polodai_activity"))
+                    <li id="polodai_activity">
+                        <a href="#springUrl('/admin/polodai/activity/list')"><i class="menu-icon fa fa-caret-right"></i>活动列表</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+
+
+                #if($sec.allGranted("polodai_indexCarousel"))
+                    <li id="polodai_indexCarousel">
+                        <a href="#springUrl('/admin/polodai/indexCarousel/list')"><i class="menu-icon fa fa-caret-right"></i>轮播图设置</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+                #if($sec.allGranted("polodai_broker_auth"))
+                    <li id="polodai_broker_auth_list">
+                        <a href="#springUrl('/admin/polodai/brokerAuth/list')"><i class="menu-icon fa fa-caret-right"></i>认证管理</a><b
+                            class="arrow"></b>
+                    </li>
+                #end
+
+            ##经纪人列表(列表查询,条件查询,审核,消费记录)
+                <li id="polodai-li-broker"><a><i class="menu-icon fa fa-caret-right"></i>经纪人列表</a></li>
+                <li id="polodai-li-order"><a href="#springUrl('/admin/polodai/order/page')"><i class="menu-icon fa fa-caret-right"></i>订单管理</a></li>
+            ##            #end
+            </ul>
+        </li>
+    #end
+
+## polodai navigate bar end
+    #if($sec.allGranted("securitymanager"))
+        <li class="" id="security-li">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon  glyphicon glyphicon-cog"></i>
+                <span class="menu-text">系统管理</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+                <li id="security-li-job">
+                    <a href="#springUrl('/')admin/schedule/list">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        定时任务
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li id="security-li-auth">
+                    <a href="#springUrl('/')admin/security/auth/list">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        权限设置
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+                <li id="security-li-role">
+                    <a href="#springUrl('/')admin/security/role/list">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        角色管理
+                    </a><b class="arrow"></b>
+                </li>
+                <li id="security-li-user">
+                    <a href="#springUrl('/')admin/security/adminuser/list">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        用户管理
+                    </a><b class="arrow"></b>
+                </li>
+                #if($sec.allGranted("setting"))
+                    <li id="nav_pwd">
+                        <a href="#springUrl('')/admin/setting/pwd/change">
+                            <i class="menu-icon fa fa-cog"></i>
+                            <span class="menu-text">修改密码</span>
+                        </a>
+                    </li>
+                #end
+                <li id="security-li-sysstat">
+                    <a href="#springUrl('/')admin/systemstat/index.html" target="_blank">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        系统信息
+                    </a><b class="arrow"></b>
+                </li>
+            </ul>
+        </li>
+    #end
+
+
+    <li>
+        <a href="#springUrl('')/admin/logout">
+            <i class="menu-icon fa fa-power-off"></i>
+            <span class="menu-text">退出</span>
+        </a>
+    </li>
+
+</ul>
