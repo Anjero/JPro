@@ -121,6 +121,7 @@ public class BaseController implements Serializable {
     }
 
 
+
     protected HttpServletRequest getRequest() {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         return request;

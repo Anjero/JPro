@@ -1,0 +1,99 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_content)
+
+<section class="content-header">
+    <h1>
+        文章
+        <small>添加</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/admin/dashboard"><i class="fa fa-dashboard"></i> 主面板</a></li>
+        <li><a href="/admin/company/index">文章</a></li>
+        <li class="active">添加</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">文章发布</h3>
+        </div>
+        <form class="form-horizontal">
+
+            <div class="box-body col-6">
+                <div class="form-group">
+                    <label for="title" class="col-sm-2 control-label">标题</label>
+                    <div class="col-sm-5"><input id="title" class="form-control" placeholder="标题" type="text"/></div>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="col-sm-2 control-label">标签</label>
+                    <div class="col-sm-5"><input id="tags" class="form-control" placeholder="标签" type="text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">是否显示</label>
+                    <label class="col-sm-5"><input id="isShow" class="flat-red" placeholder="是否显示" checked type="checkbox"></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">是否推荐</label>
+                    <div class="col-sm-5"><input id="is" class="flat-red" placeholder="是否推荐" checked type="checkbox"></div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">来源</label>
+                    <div class="col-sm-5"><input id="isShow" class="form-control" placeholder="是否显示" type="text" value="原创"></div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">版块</label>
+                    <div class="col-sm-5">
+                        <select class="form-control select2" style="width: 100%;">
+                            <option>默认</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">简要</label>
+                    <div class="col-sm-9">
+                        <script id="editor1" type="text/plain" style="width:100%;height:300px;"></script>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">内容</label>
+                    <div class="col-sm-9">
+                        <script id="editor2" type="text/plain" style="width:100%;height:500px;"></script>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</section>
+
+#end
+#define($admin_js)
+    #ueditor_js()
+<link rel="stylesheet" href="http://localhost/html/AdminLTE/plugins/iCheck/all.css">
+<link rel="stylesheet" href="http://localhost/html/AdminLTE/plugins/select2/select2.min.css">
+<style>
+    .select2-container--default .select2-selection--single{
+        border-radius: 0;
+    }
+</style>
+<script src="http://localhost/html/AdminLTE/plugins/iCheck/icheck.min.js"></script>
+<script src="http://localhost/html/AdminLTE/plugins/select2/select2.full.min.js"></script>
+<script>
+    $(".select2").select2();
+    var ue1 = UE.getEditor('editor1');
+    var ue2 = UE.getEditor('editor2');
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+        checkboxClass: 'icheckbox_flat-green',
+        radioClass: 'iradio_flat-green'
+    });
+
+</script>
+#end

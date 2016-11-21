@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="net.anjero.pro.module.article.mapper.ArticleMapper" >
+  <resultMap id="BaseResultMap" type="net.anjero.pro.module.article.pojo.Article" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="in_time" property="inTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <result column="author" property="author" jdbcType="INTEGER" />
+    <result column="tag" property="tag" jdbcType="VARCHAR" />
+    <result column="click" property="click" jdbcType="INTEGER" />
+    <result column="source" property="source" jdbcType="VARCHAR" />
+    <result column="link" property="link" jdbcType="VARCHAR" />
+    <result column="image_path" property="imagePath" jdbcType="VARCHAR" />
+    <result column="classify_id" property="classifyId" jdbcType="INTEGER" />
+    <result column="is_show" property="isShow" jdbcType="BIT" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="net.anjero.pro.module.article.pojo.Article" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, title, remark, in_time, modify_time, author, tag, click, source, link, image_path, 
+    classify_id, is_show
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="net.anjero.pro.module.article.pojo.ArticleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="net.anjero.pro.module.article.pojo.ArticleExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart >= 0" >
+      limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from article
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="net.anjero.pro.module.article.pojo.ArticleExample" >
+    delete from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="net.anjero.pro.module.article.pojo.Article" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article (title, remark, in_time, 
+      modify_time, author, tag, 
+      click, source, link, 
+      image_path, classify_id, is_show, 
+      content)
+    values (#{title,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{inTime,jdbcType=TIMESTAMP}, 
+      #{modifyTime,jdbcType=TIMESTAMP}, #{author,jdbcType=INTEGER}, #{tag,jdbcType=VARCHAR}, 
+      #{click,jdbcType=INTEGER}, #{source,jdbcType=VARCHAR}, #{link,jdbcType=VARCHAR}, 
+      #{imagePath,jdbcType=VARCHAR}, #{classifyId,jdbcType=INTEGER}, #{isShow,jdbcType=BIT}, 
+      #{content,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="net.anjero.pro.module.article.pojo.Article" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into article
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="inTime != null" >
+        in_time,
+      </if>
+      <if test="modifyTime != null" >
+        modify_time,
+      </if>
+      <if test="author != null" >
+        author,
+      </if>
+      <if test="tag != null" >
+        tag,
+      </if>
+      <if test="click != null" >
+        click,
+      </if>
+      <if test="source != null" >
+        source,
+      </if>
+      <if test="link != null" >
+        link,
+      </if>
+      <if test="imagePath != null" >
+        image_path,
+      </if>
+      <if test="classifyId != null" >
+        classify_id,
+      </if>
+      <if test="isShow != null" >
+        is_show,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="inTime != null" >
+        #{inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="author != null" >
+        #{author,jdbcType=INTEGER},
+      </if>
+      <if test="tag != null" >
+        #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="click != null" >
+        #{click,jdbcType=INTEGER},
+      </if>
+      <if test="source != null" >
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="link != null" >
+        #{link,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePath != null" >
+        #{imagePath,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyId != null" >
+        #{classifyId,jdbcType=INTEGER},
+      </if>
+      <if test="isShow != null" >
+        #{isShow,jdbcType=BIT},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="net.anjero.pro.module.article.pojo.ArticleExample" resultType="java.lang.Integer" >
+    select count(*) from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update article
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inTime != null" >
+        in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modifyTime != null" >
+        modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.author != null" >
+        author = #{record.author,jdbcType=INTEGER},
+      </if>
+      <if test="record.tag != null" >
+        tag = #{record.tag,jdbcType=VARCHAR},
+      </if>
+      <if test="record.click != null" >
+        click = #{record.click,jdbcType=INTEGER},
+      </if>
+      <if test="record.source != null" >
+        source = #{record.source,jdbcType=VARCHAR},
+      </if>
+      <if test="record.link != null" >
+        link = #{record.link,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imagePath != null" >
+        image_path = #{record.imagePath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.classifyId != null" >
+        classify_id = #{record.classifyId,jdbcType=INTEGER},
+      </if>
+      <if test="record.isShow != null" >
+        is_show = #{record.isShow,jdbcType=BIT},
+      </if>
+      <if test="record.content != null" >
+        content = #{record.content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update article
+    set id = #{record.id,jdbcType=INTEGER},
+      title = #{record.title,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
+      author = #{record.author,jdbcType=INTEGER},
+      tag = #{record.tag,jdbcType=VARCHAR},
+      click = #{record.click,jdbcType=INTEGER},
+      source = #{record.source,jdbcType=VARCHAR},
+      link = #{record.link,jdbcType=VARCHAR},
+      image_path = #{record.imagePath,jdbcType=VARCHAR},
+      classify_id = #{record.classifyId,jdbcType=INTEGER},
+      is_show = #{record.isShow,jdbcType=BIT},
+      content = #{record.content,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update article
+    set id = #{record.id,jdbcType=INTEGER},
+      title = #{record.title,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      in_time = #{record.inTime,jdbcType=TIMESTAMP},
+      modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
+      author = #{record.author,jdbcType=INTEGER},
+      tag = #{record.tag,jdbcType=VARCHAR},
+      click = #{record.click,jdbcType=INTEGER},
+      source = #{record.source,jdbcType=VARCHAR},
+      link = #{record.link,jdbcType=VARCHAR},
+      image_path = #{record.imagePath,jdbcType=VARCHAR},
+      classify_id = #{record.classifyId,jdbcType=INTEGER},
+      is_show = #{record.isShow,jdbcType=BIT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="net.anjero.pro.module.article.pojo.Article" >
+    update article
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="inTime != null" >
+        in_time = #{inTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="author != null" >
+        author = #{author,jdbcType=INTEGER},
+      </if>
+      <if test="tag != null" >
+        tag = #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="click != null" >
+        click = #{click,jdbcType=INTEGER},
+      </if>
+      <if test="source != null" >
+        source = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="link != null" >
+        link = #{link,jdbcType=VARCHAR},
+      </if>
+      <if test="imagePath != null" >
+        image_path = #{imagePath,jdbcType=VARCHAR},
+      </if>
+      <if test="classifyId != null" >
+        classify_id = #{classifyId,jdbcType=INTEGER},
+      </if>
+      <if test="isShow != null" >
+        is_show = #{isShow,jdbcType=BIT},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="net.anjero.pro.module.article.pojo.Article" >
+    update article
+    set title = #{title,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      in_time = #{inTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      author = #{author,jdbcType=INTEGER},
+      tag = #{tag,jdbcType=VARCHAR},
+      click = #{click,jdbcType=INTEGER},
+      source = #{source,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      image_path = #{imagePath,jdbcType=VARCHAR},
+      classify_id = #{classifyId,jdbcType=INTEGER},
+      is_show = #{isShow,jdbcType=BIT},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="net.anjero.pro.module.article.pojo.Article" >
+    update article
+    set title = #{title,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      in_time = #{inTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      author = #{author,jdbcType=INTEGER},
+      tag = #{tag,jdbcType=VARCHAR},
+      click = #{click,jdbcType=INTEGER},
+      source = #{source,jdbcType=VARCHAR},
+      link = #{link,jdbcType=VARCHAR},
+      image_path = #{imagePath,jdbcType=VARCHAR},
+      classify_id = #{classifyId,jdbcType=INTEGER},
+      is_show = #{isShow,jdbcType=BIT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select resultMap="ResultMapWithBLOBs" parameterType="net.anjero.pro.module.article.pojo.ArticleExample" id="selectByExampleWithBLOBsWithRowbounds" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select resultMap="BaseResultMap" parameterType="net.anjero.pro.module.article.pojo.ArticleExample" id="selectByExampleWithRowbounds" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from article
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+</mapper>

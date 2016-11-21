@@ -25,21 +25,21 @@
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://localhost:3306/jpro_db" userId="root"
 			password="123456" />
-		<javaModelGenerator targetPackage="net.anjero.pro.module.company.pojo"
+		<javaModelGenerator targetPackage="net.anjero.pro.module.classify.pojo"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
-		<sqlMapGenerator targetPackage="net.anjero.pro.module.company.mapper"
+		<sqlMapGenerator targetPackage="net.anjero.pro.module.classify.mapper"
 			targetProject="src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
-		<javaClientGenerator targetPackage="net.anjero.pro.module.company.mapper"
+		<javaClientGenerator targetPackage="net.anjero.pro.module.classify.mapper"
 			targetProject="src/main/java" type="XMLMAPPER">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-        <table tableName="company">
+        <table tableName="classify">
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 	</context>

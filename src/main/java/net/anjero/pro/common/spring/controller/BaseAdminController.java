@@ -32,6 +32,8 @@ import java.text.SimpleDateFormat;
 @Controller
 public class BaseAdminController extends BaseController {
 
+
+
     public UserExtend getAdmin() throws ForbiddenJsonException {
         return (UserExtend) adminUser();
     }
@@ -50,6 +52,7 @@ public class BaseAdminController extends BaseController {
         throw new ForbiddenJsonException("未登录或超时，请重新登录！");
     }
 
+
     public UserDetails adminUser() throws ForbiddenJsonException {
         try {
             UserExtend userExtend = (UserExtend) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -58,6 +61,7 @@ public class BaseAdminController extends BaseController {
             throw new ForbiddenJsonException("未登录或超时，请重新登录！");
         }
     }
+
     protected void returnJson(Object object, HttpServletRequest request, HttpServletResponse response) {
         String callback = request.getParameter("callback");
         if (StringUtils.isEmpty(callback)) {
@@ -68,6 +72,7 @@ public class BaseAdminController extends BaseController {
 
 
     }
+
     /**
      * jackson转换json
      *
@@ -132,7 +137,7 @@ public class BaseAdminController extends BaseController {
 
             response.setContentType("text/json;charset=UTF-8");
             mapper.writeValue(response.getWriter(), new JSONPObject(callback, object));
-           //log.debug(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(object));DefaultStringSerializer
+            //log.debug(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(object));DefaultStringSerializer
         } catch (JsonGenerationException e1) {
             e1.printStackTrace();
         } catch (JsonMappingException e1) {
