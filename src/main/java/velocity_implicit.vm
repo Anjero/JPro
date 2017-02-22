@@ -1,7 +1,0 @@
-#* @implicitly included *#
-#* @vtlvariable name="date" type="org.apache.velocity.tools.generic.DateTool" *#
-#* @vtlvariable name="company" type="net.anjero.pro.module.company.pojo.Company" *#
-#* @velocityproperties path="velocity.properties" *#
-#* @vtlmacrolibrary path="../webapp/WEB-INF/macro/macros.vm" *#
-#* @vtlvariable name="base" type="net.anjero.pro.plugins.velocity.VelocityUtils" *#
-#* @vtlvariable name="admin_content" type="java.lang.String" *#
