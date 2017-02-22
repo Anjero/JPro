@@ -1,0 +1,85 @@
+<div class="tab-pane" id="timeline">
+    <ul class="timeline timeline-inverse">
+        <li class="time-label">
+                        <span class="bg-red">
+                          2017-02-22
+                        </span>
+        </li>
+        <li>
+            <i class="fa fa-envelope bg-blue"></i>
+
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+
+                <h3 class="timeline-header"><a href="#">系统服务</a> 给你发送了邮件</h3>
+
+                <div class="timeline-body">
+                    呀呀呀呀呀呀！这是邮件内容！呀呀呀呀呀呀！这是邮件内容！呀呀呀呀呀呀！这是邮件内容！呀呀呀呀呀呀！这是邮件内容！呀呀呀呀呀呀！这是邮件内容！呀呀呀呀呀呀！这是邮件内容！
+                </div>
+                <div class="timeline-footer">
+                    <a class="btn btn-primary btn-xs">更多</a>
+                    <a class="btn btn-danger btn-xs">删除</a>
+                </div>
+            </div>
+        </li>
+        <!-- END timeline item -->
+        <!-- timeline item -->
+        <li>
+            <i class="fa fa-user bg-aqua"></i>
+
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 5 分钟前</span>
+
+                <h3 class="timeline-header no-border"><a href="#">管理员</a> 回复了你的消息
+                </h3>
+            </div>
+        </li>
+        <!-- END timeline item -->
+        <!-- timeline item -->
+        <li>
+            <i class="fa fa-comments bg-yellow"></i>
+
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+
+                <h3 class="timeline-header"><a href="#">Anjero</a> 评论了你的回复</h3>
+
+                <div class="timeline-body">
+                   谢谢你的回复，你真棒！
+                </div>
+                <div class="timeline-footer">
+                    <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                </div>
+            </div>
+        </li>
+        <!-- END timeline item -->
+        <!-- timeline time label -->
+        <li class="time-label">
+                        <span class="bg-green">
+                          3 Jan. 2014
+                        </span>
+        </li>
+        <!-- /.timeline-label -->
+        <!-- timeline item -->
+        <li>
+            <i class="fa fa-camera bg-purple"></i>
+
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                <h3 class="timeline-header"><a href="#">Anjero</a> 更新了资料图片</h3>
+
+                <div class="timeline-body">
+                    <img src="http://placehold.it/150x100" alt="..." class="margin">
+                    <img src="http://placehold.it/150x100" alt="..." class="margin">
+                    <img src="http://placehold.it/150x100" alt="..." class="margin">
+                    <img src="http://placehold.it/150x100" alt="..." class="margin">
+                </div>
+            </div>
+        </li>
+        <!-- END timeline item -->
+        <li>
+            <i class="fa fa-clock-o bg-gray"></i>
+        </li>
+    </ul>
+</div>

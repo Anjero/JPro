@@ -1,0 +1,49 @@
+#set($layout = "layout/admin/admin.vm")
+#define($navActive)admin-role#end
+#define($admin_content)
+
+<section class="content-header">
+    <h1>
+        用户资料
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">管理</a></li>
+        <li class="active">用户资料</li>
+    </ol>
+</section>
+
+
+<section class="content">
+
+    <div class="row">
+        <div class="col-md-3">
+            #parse('/vm/admin/security/user/profile/profile_user.vm')
+
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#activity" data-toggle="tab" aria-expanded="false">动态</a></li>
+                    <li class=""><a href="#timeline" data-toggle="tab" aria-expanded="false">时间线</a></li>
+                    <li class=""><a href="#settings" data-toggle="tab" aria-expanded="true">设置</a></li>
+                </ul>
+                <div class="tab-content">
+
+
+                    #parse('/vm/admin/security/user/profile/profile_activity.vm')
+                    #parse('/vm/admin/security/user/profile/profile_timeline.vm')
+                    #parse('/vm/admin/security/user/profile/profile_setting.vm')
+                </div>
+                <!-- /.tab-content -->
+            </div>
+            <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+</section>
+
+#end

@@ -118,7 +118,7 @@ public class PaginationPlugin extends PluginAdapter {
 
     public static void generate() {
         String config = PaginationPlugin.class.getClassLoader().getResource(
-                "generatorConfiguration/mybatis_generator.xml").getFile();
+                "generatorConfiguration/mybatis_generator_admin_user.xml").getFile();
         System.out.println(config);
         String[] arg = {"-configfile", config, "-overwrite"};
         ShellRunner.main(arg);

@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @author :Anjero
@@ -145,6 +146,13 @@ public class BaseAdminController extends BaseController {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+    }
+
+    public static String getcurrentDatetime(String style) {
+        SimpleDateFormat formatter = new SimpleDateFormat(style);
+        Date currentTime = new Date();
+        String currentDatetime = formatter.format(currentTime);
+        return currentDatetime;
     }
 
 }

@@ -4,17 +4,23 @@ import com.github.pagehelper.PageInfo;
 import net.anjero.common.core.exception.ForbiddenJsonException;
 import net.anjero.common.spring.MediaType;
 import net.anjero.common.spring.controller.BaseAdminController;
+import net.anjero.common.util.FileUtil;
+import net.anjero.plugins.json.Result;
 import net.anjero.pro.module.article.pojo.Article;
 import net.anjero.pro.module.article.service.ArticleService;
 import net.anjero.pro.module.classify.service.ClassifyService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
+import java.util.PropertyResourceBundle;
+import java.util.ResourceBundle;
+import java.util.UUID;
 
 /**
  * 文章管理
@@ -55,7 +61,21 @@ public class ArticleAdminController extends BaseAdminController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST, produces = MediaType.JSON_UTF_8)
     @ResponseBody
-    public String save(Article article) throws ForbiddenJsonException {
+    public String save(Article article,@RequestParam CommonsMultipartFile uploadFile) throws ForbiddenJsonException {
+
+
+        ResourceBundle bundle = PropertyResourceBundle.getBundle("analysis");
+
+
+        String filePath = getcurrentDatetime("yyMMdd");
+        String realPath = bundle.getString("analysis.file.catalogue") + "upload/" + filePath + "/";
+        Result result;
+//        String res = JSONUtils.toJSONString(result)
+//        return res;
+        String uuid = UUID.randomUUID().toString();
+        String savePath = FileUtil.saveFile(uploadFile, realPath, uploadFile.getOriginalFilename());
+
+
         article.setInTime(new Date());
         article.setModifyTime(article.getInTime());
         article.setAuthor(getAdminId());

@@ -23,26 +23,31 @@
             <div class="box-body col-6">
                 <div class="form-group">
                     <label for="title" class="col-sm-2 control-label">标题</label>
-                    <div class="col-sm-5"><input id="title" name="title" class="form-control" placeholder="标题" type="text"/></div>
+                    <div class="col-sm-5"><input id="title" name="title" class="form-control" placeholder="标题"
+                                                 type="text"/></div>
                 </div>
                 <div class="form-group">
                     <label for="title" class="col-sm-2 control-label">唯一识别码</label>
-                    <div class="col-sm-5"><input id="identityNo" name="identityNo" class="form-control" placeholder="唯一识别码" type="text"/></div>
+                    <div class="col-sm-5"><input id="identityNo" name="identityNo" class="form-control"
+                                                 placeholder="唯一识别码" type="text"/></div>
                 </div>
                 <div class="form-group">
                     <label for="title" class="col-sm-2 control-label">LINK</label>
-                    <div class="col-sm-5"><input id="link" name="link" class="form-control" placeholder="LINK" type="text"/></div>
+                    <div class="col-sm-5"><input id="link" name="link" class="form-control" placeholder="LINK"
+                                                 type="text"/></div>
                 </div>
 
                 <div class="form-group">
                     <label for="upload-image" class="col-sm-2 control-label">上传图片</label>
-                    <div class="col-sm-5"><input id="upload-image" name="uploadImage" class="form-control" placeholder="上传图片" type="file"/></div>
+                    <div class="col-sm-5"><input id="upload-image" name="uploadImage" class="form-control"
+                                                 placeholder="上传图片" type="file"/></div>
                     <div class="hide"><input title="hidden" id="imagePath" name="imagePath" value=""/></div>
                 </div>
 
                 <div class="form-group">
                     <label for="tags" class="col-sm-2 control-label">标签</label>
-                    <div class="col-sm-5"><input id="tag" name="tag" class="form-control" placeholder="标签" type="text"></div>
+                    <div class="col-sm-5"><input id="tag" name="tag" class="form-control" placeholder="标签" type="text">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="isShow" class="col-sm-2 control-label">是否显示</label>
@@ -52,22 +57,26 @@
 
                 <div class="form-group">
                     <label for="isShow" class="col-sm-2 control-label">是否推荐</label>
-                    <div class="col-sm-5"><input id="isTop" name="isTop" class="flat-red" placeholder="是否推荐" checked type="checkbox">
+                    <div class="col-sm-5"><input id="isTop" name="isTop" class="flat-red" placeholder="是否推荐" checked
+                                                 type="checkbox">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="isShow" class="col-sm-2 control-label">评论开关</label>
-                    <div class="col-sm-5"><input id="isComment" name="isComment" class="flat-red" placeholder="评论开关" checked type="checkbox">
+                    <div class="col-sm-5"><input id="isComment" name="isComment" class="flat-red" placeholder="评论开关"
+                                                 checked type="checkbox">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="isShow" class="col-sm-2 control-label">排序</label>
-                    <div class="col-sm-5"><input id="displayIndex"  name="displayIndex" class="form-control" placeholder="排序" type="text"
+                    <div class="col-sm-5"><input id="displayIndex" name="displayIndex" class="form-control"
+                                                 placeholder="排序" type="text"
                                                  value="99"></div>
                 </div>
                 <div class="form-group">
                     <label for="isShow" class="col-sm-2 control-label">来源</label>
-                    <div class="col-sm-5"><input id="source" name="null" class="form-control" placeholder="来源" type="text"
+                    <div class="col-sm-5"><input id="source" name="null" class="form-control" placeholder="来源"
+                                                 type="text"
                                                  value="原创"></div>
                 </div>
                 <div class="form-group">
@@ -108,44 +117,87 @@
     #ueditor_js()
 <link rel="stylesheet" href="http://localhost/html/AdminLTE/plugins/iCheck/all.css">
 <link rel="stylesheet" href="http://localhost/html/AdminLTE/plugins/select2/select2.min.css">
+<script src="/static/js/ajaxFileUpload.js"></script>
+
 <style>
     .select2-container--default .select2-selection--single {
         border-radius: 0;
     }
-</style>
-<script src="http://localhost/html/AdminLTE/plugins/iCheck/icheck.min.js"></script>
-<script src="http://localhost/html/AdminLTE/plugins/select2/select2.full.min.js"></script>
+</style>#staticUrl("/")AdminLTE/bootstrap/css/bootstrap.min.css
+<script src="#staticUrl("/")AdminLTE/plugins/iCheck/icheck.min.js"></script>
+<script src="#staticUrl("/")AdminLTE/plugins/select2/select2.full.min.js"></script>
 <script>
-    $(".select2").select2();
-    var ue1 = UE.getEditor('remark');
-    var ue2 = UE.getEditor('content');
-    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-        checkboxClass: 'icheckbox_flat-green',
-        radioClass: 'iradio_flat-green'
-    });
+    $(document).ready(function () {
 
-    $("#contentLi").addClass("active");
-    $("#articleLi").addClass("active");
+        $(".select2").select2();
+        var ue1 = UE.getEditor('remark');
+        var ue2 = UE.getEditor('content');
+        $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+            checkboxClass: 'icheckbox_flat-green',
+            radioClass: 'iradio_flat-green'
+        });
 
-    $("#submitBtn").click(function () {
-        $.ajax({
-            url: '#baseUrl('/admin/article/save')',
-            async: false,
-            cache: false,
-            dataType: "json",
-            type: 'post',
+        $("#contentLi").addClass("active");
+        $("#articleLi").addClass("active");
 
-            contentType:'application/x-www-form-urlencoded',
-            data: $("#form").serialize(),
-            success: function (json) {
-                if (json.code == 200) {
-                    alert(json.code);
-                }else{
-                    alert(json.code);
+        $("#submitBtn").click(function () {
+            $.ajax({
+                url: '#baseUrl('/admin/article/save')',
+                async: false,
+                cache: false,
+                dataType: "json",
+                type: 'post',
+
+                contentType: 'application/x-www-form-urlencoded',
+                data: $("#form").serialize(),
+                success: function (json) {
+                    if (json.code == 200) {
+                        alert(json.code);
+                    } else {
+                        alert(json.code);
+                    }
                 }
-            }
+            });
         });
     });
+
+    function _uploadFile() {
+
+        //loading层
+        var index_loading = layer.load(1, {
+            shade: [0.5, '#000'] //0.1透明度的白色背景
+        });
+//        alert(11);
+        var optionsdata = {
+            url: '#springUrl('')/admin/analysis/uploadFile',
+            secureuri: false,
+            fileElementId: 'uploadFile',
+            dataType: "json",
+            type: 'POST',
+            data: {type: 'url'},
+            success: function (data, status) {
+                console.log(data)
+                if (data.code == 200) {
+                    layer.close(index_loading);
+                    layer.alert("上传成功!");
+
+                    location.href='#springUrl('')/admin/analysis/step/'+data.result;
+                } else {
+                    return false;
+                }
+            },
+            error: function (data, status, e) {
+                console.log("status:" + status)
+                console.log("e:" + e)
+                console.log(data)
+                layer.close(index_loading);
+                layer.alert("上传控件报错!");
+                return false;
+            }
+        };
+        return $.ajaxFileUpload(optionsdata);
+
+    }
 
 </script>
 #end

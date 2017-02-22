@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+            location="/Users/Anjero/work/dev/maven/repository/mysql/mysql-connector-java/5.1.24/mysql-connector-java-5.1.24.jar" />
+	<context id="item">
+		<property name="suppressTypeWarnings" value="true" />
+		<!-- model Serializable -->
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<!-- 修改名字example>Criteria -->
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="pojo$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<!-- selectexample -->
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		<!-- model toString -->
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<!-- self page plugin -->
+		<plugin type="net.anjero.plugins.mybaits.PaginationPlugin"></plugin>
+
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/jpro_db" userId="root"
+			password="123456" />
+		<javaModelGenerator targetPackage="net.anjero.pro.module.security.pojo"
+			targetProject="jpro-core/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="net.anjero.pro.module.security.mapper"
+			targetProject="jpro-core/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator targetPackage="net.anjero.pro.module.security.mapper"
+			targetProject="jpro-core/src/main/java" type="XMLMAPPER">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+        <table tableName="security_admin_user_profile">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+	</context>
+</generatorConfiguration>
