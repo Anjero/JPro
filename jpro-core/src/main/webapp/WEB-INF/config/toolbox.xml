@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox>
+	<xhtml>true</xhtml>
+    <tool>
+        <key>date</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.DateTool</class>
+        <parameter name="format" value="yyyy-MM-dd HH:mm:ss" />
+    </tool>
+    <tool>
+        <key>display</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.DisplayTool</class>
+    </tool>
+    <tool>
+        <key>math</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.MathTool</class>
+    </tool>
+    <tool>
+        <key>iter</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.IteratorTool</class>
+    </tool>
+    <tool>
+        <key>sort</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.SortTool</class>
+    </tool>
+    <tool>
+        <key>sec</key>
+        <scope>application</scope>
+        <class>net.anjero.plugins.velocity.VelocitySecurityTool</class>
+    </tool>
+    <tool>
+        <key>base</key>
+        <scope>application</scope>
+        <class>net.anjero.plugins.velocity.VelocityUtils</class>
+    </tool>
+    <tool>
+        <key>number</key>
+        <scope>application</scope>
+        <class>org.apache.velocity.tools.generic.NumberTool</class>
+    </tool>
+    <tool>
+        <key>web_sec</key>
+        <scope>application</scope>
+        <class>net.anjero.plugins.velocity.VelocityWebSecurity</class>
+    </tool>
+</toolbox>

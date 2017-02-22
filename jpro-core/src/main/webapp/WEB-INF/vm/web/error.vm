@@ -1,0 +1,6 @@
+#set($layout = "/vm/web/default/layout/index.vm")
+#define($vm_content)
+
+ERROR!
+
+#end

@@ -1,0 +1,88 @@
+#set($layout = "layout/admin/admin.vm")
+#define($admin_content)
+
+<section class="content-header">
+    <h1>
+        文章
+        <small>添加</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/admin/dashboard"><i class="fa fa-dashboard"></i> 主面板</a></li>
+        <li><a href="/admin/article/index">文章</a></li>
+        <li class="active">添加</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">文章发布</h3>
+        </div>
+        <form class="form-horizontal">
+
+            <div class="box-body col-6">
+                <div class="form-group">
+                    <label for="title" class="col-sm-2 control-label">版块名称</label>
+                    <div class="col-sm-5"><input id="classifyName" name="classifyName" class="form-control" placeholder="版块名称" type="text"/></div>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="col-sm-2 control-label">唯一识别码</label>
+                    <div class="col-sm-5"><input id="classifyIdentify" name="classifyIdentify" class="form-control" placeholder="唯一识别码" type="text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="col-sm-2 control-label">所属版块</label>
+                    <div class="col-sm-5">
+                        <select id="pid" name="pid" class="select2" style="width: 200px;height: 32px;">
+                            <option value="0">无</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">是否显示 </label>
+                    <label class="col-sm-5"><input id="isShow" name="isShow" class="flat-red" placeholder="是否显示" checked type="checkbox"></label>
+                </div>
+
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">排序位置</label>
+                    <div class="col-sm-5"><input id="displayIndex" class="form-control" placeholder="排序位置" name="displayIndex" type="text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="isShow" class="col-sm-2 control-label">说明</label>
+                    <div class="col-sm-5"><input id="remark" class="form-control" placeholder="说明" type="text" name="remark"></div>
+                </div>
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</section>
+
+#end
+#define($admin_js)
+<link rel="stylesheet" href="http://localhost/html/AdminLTE/plugins/iCheck/all.css">
+<link rel="stylesheet" href="http://localhost/html/AdminLTE/plugins/select2/select2.min.css">
+<style>
+    .select2-container--default .select2-selection--single{
+        border-radius: 0;
+    }
+
+    .select2-container .select2-selection--single{
+        height: 32px;
+    }
+</style>
+<script src="http://localhost/html/AdminLTE/plugins/iCheck/icheck.min.js"></script>
+<script src="http://localhost/html/AdminLTE/plugins/select2/select2.full.min.js"></script>
+<script>
+    $(".select2").select2();
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+        checkboxClass: 'icheckbox_flat-green',
+        radioClass: 'iradio_flat-green'
+    });
+
+</script>
+#end

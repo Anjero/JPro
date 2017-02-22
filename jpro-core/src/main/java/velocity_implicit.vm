@@ -1,0 +1,10 @@
+#* @implicitly included *#
+#* @vtlvariable name="page" type="com.github.pagehelper.PageInfo" *#
+#* @vtlvariable name="classify" type="net.anjero.pro.module.classify.pojo.Classify" *#
+#* @vtlvariable name="article" type="net.anjero.pro.module.article.pojo.Article" *#
+#* @vtlvariable name="vm_content" type="java.lang.String" *#
+#* @vtlvariable name="date" type="org.apache.velocity.tools.generic.DateTool" *#
+#* @velocityproperties path="velocity.properties" *#
+#* @vtlmacrolibrary path="../webapp/WEB-INF/macro/macros.vm" *#
+#* @vtlvariable name="base" type="net.anjero.plugins.velocity.VelocityUtils" *#
+#* @vtlvariable name="admin_content" type="java.lang.String" *#

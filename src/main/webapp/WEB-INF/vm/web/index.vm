@@ -1,4 +1,0 @@
-#set($layout = "/vm/web/v_$!{template}/layout/index.vm")
-#define($vm_content)
-    #parse("/vm/web/v_$!{template}/$!{key}.vm")
-#end
