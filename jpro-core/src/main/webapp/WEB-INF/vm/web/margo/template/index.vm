@@ -1,0 +1,822 @@
+#set($layout = "/vm/web/margo/layout/index.vm")
+#define($navKey)index#end
+
+#define($vm_content)
+<section id="home">
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img class="img-responsive" src="#staticUrl('/margo/')images/slider/bg1.jpg" alt="slider">
+                <div class="slider-content">
+                    <div class="col-md-12 text-center">
+                        <h2 class="animated2">
+                            <span>Welcome to <strong>D5</strong></span>
+                        </h2>
+                        <h3 class="animated3">
+                            <span>为注重品质的您提供最完美的潜水度假体验！</span>
+                        </h3>
+                        <p class="animated4"><a href="#" class="slider btn btn-system btn-large">详情</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Carousel item end -->
+            <div class="item">
+                <img class="img-responsive" src="#staticUrl('/margo/')images/slider/bg2.jpg" alt="slider">
+                <div class="slider-content">
+                    <div class="col-md-12 text-center">
+                        <h2 class="animated4">
+                            <span><strong>D5</strong> 潜水中心</span>
+                        </h2>
+                        <h3 class="animated5">
+                            <span>极致风景、碧蓝海水、奇妙海洋生物的独特体验</span>
+                        </h3>
+                        <p class="animated6"><a href="#" class="slider btn btn-system btn-large">详情</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/ Carousel item end -->
+            <div class="item">
+                <img class="img-responsive" src="#staticUrl('/margo/')images/slider/bg3.jpg" alt="slider">
+                <div class="slider-content">
+                    <div class="col-md-12 text-center">
+                        <h2 class="animated7 white">
+                            <span>The way of <strong>Success</strong></span>
+                        </h2>
+                        <h3 class="animated8 white">
+                            <span>Why you are waiting</span>
+                        </h3>
+                        <div class="">
+                            <a class="animated4 slider btn btn-system btn-large btn-min-block" href="#">Get
+                                Now</a><a class="animated4 slider btn btn-default btn-min-block" href="#">Live
+                            Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#main-slide" data-slide="prev">
+            <span><i class="fa fa-angle-left"></i></span>
+        </a>
+        <a class="right carousel-control" href="#main-slide" data-slide="next">
+            <span><i class="fa fa-angle-right"></i></span>
+        </a>
+    </div>
+</section>
+<div class="section service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="01">
+                <div class="service-icon">
+                    <i class="fa fa-leaf icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>High Quality Theme</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="02">
+                <div class="service-icon">
+                    <i class="fa fa-desktop icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Full Responsive</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="03">
+                <div class="service-icon">
+                    <i class="fa fa-eye icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Retina Display Ready</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="04">
+                <div class="service-icon">
+                    <i class="fa fa-code icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Clean Modern Code</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="05">
+                <div class="service-icon">
+                    <i class="fa fa-rocket icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Fast & Light Theme</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="06">
+                <div class="service-icon">
+                    <i class="fa fa-css3 icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Css3 Transitions</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="07">
+                <div class="service-icon">
+                    <i class="fa fa-download icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Free Updates</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
+                 data-animation-delay="08">
+                <div class="service-icon">
+                    <i class="fa fa-umbrella icon-large"></i>
+                </div>
+                <div class="service-content">
+                    <h4>Help & Support</h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
+                        pariatur</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section purchase">
+    <div class="container">
+        <div class="section-video-content text-center">
+            <h1 class="fittext wite-text uppercase tlt">
+                      <span class="texts">
+                        <span>Modern</span>
+                        <span>Clean</span>
+                        <span>Awesome</span>
+                        <span>Cool</span>
+                        <span>Great</span>
+                      </span>
+                Margo Template is Ready for <br/>Business, Agency <strong>or</strong> Creative Portfolios
+            </h1>
+            <a href="#" class="btn-system btn-large"><i class="fa fa-tasks"></i> Check Out Features</a>
+            <a href="#" class="btn-system btn-large btn-wite"><i class="fa fa-download"></i> Purchase This Now</a>
+        </div>
+    </div>
+</div>
+<div class="section full-width-portfolio" style="border-top:0; border-bottom:0; background:#fff;">
+    <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
+        <h1>专业 <strong>潜水器具</strong></h1>
+    </div>
+    <p class="text-center">这里放器具概述.</p>
+    <ul id="portfolio-list" data-animated="fadeIn">
+        <li>
+            <img src="#staticUrl('/margo/')images/portfolio/1.jpg" alt="" style=""/>
+            <div class="portfolio-item-content">
+                <span class="header">面镜</span>
+                <p class="body">人类的眼睛无法在水中对焦。因此面镜能提供一段空腔让您的眼睛可以对焦且能在水底看得更清楚。 亦称作，潜水面镜，潜水者面镜，护目镜（误称），半面镜，面罩。
+                </p>
+            </div>
+            <a href="#"><i class="more">+</i></a>
+
+        </li>
+        <li>
+            <img src="#staticUrl('/margo/')images/portfolio/2.jpg" alt=""/>
+            <div class="portfolio-item-content">
+                <span class="header">防寒衣</span>
+                <p class="body">
+                    水分吸收热量的速度大約是空气的800倍快，因此您在水中容易快速失温。此外，有時水肺潜水环境还具有刮伤、刺伤及烧烫伤的潜在危机。潜水衣将能帮助您维持体温並防止皮肤遭受意外的伤害或晒伤。
+                </p>
+            </div>
+            <a href="#"><i class="more">+</i></a>
+
+        </li>
+        <li>
+            <img src="#staticUrl('/margo/')images/portfolio/3.jpg" alt=""/>
+            <div class="portfolio-item-content">
+                <span class="header">呼吸管</span>
+                <p class="body">
+                    呼吸管（schnorkel），让您能在脸浸置于水中时呼吸，同时在水花四溅的波浪中也能较轻松地呼吸而不须浪费您水肺气瓶中的空气。呼吸管在您需要花费时间等候接驳船只或需要游上一段距离才能上船或上岸而气瓶又几乎耗尽的情况下特别有用。
+                </p>
+            </div>
+            <a href="#"><i class="more">+</i></a>
+
+        </li>
+        <li>
+            <img src="#staticUrl('/margo/')images/portfolio/4.jpg" alt=""/>
+            <div class="portfolio-item-content">
+                <span class="header"> 气瓶</span>
+                <p class="body">
+                    气瓶（通常被称做「水肺气瓶」），亦称做：气瓶、水肺瓶、潜水气瓶、高压气瓶，内装有潜水时所需要的呼吸用压缩空气。现代的水肺气瓶瓶身是由铝合金或钢合金制成以承受高达200 巴（bar）/3000
+                    psi的气压。您的潜水调节器将会贴附在气瓶阀上。
+                </p>
+            </div>
+            <a href="#"><i class="more">+</i></a>
+
+        </li>
+    </ul>
+</div>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <!-- Start Recent Posts Carousel -->
+                <div class="latest-posts">
+                    <h4 class="classic-title"><span>最新活动</span></h4>
+                    <div class="latest-posts-classic custom-carousel touch-carousel" data-appeared-items="2">
+
+                        <!-- Posts 1 -->
+                        <div class="post-row item">
+                            <div class="left-meta-post">
+                                <div class="post-date"><span class="day">28</span><span class="month">Dec</span>
+                                </div>
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                            </div>
+                            <h3 class="post-title"><a href="#">9折预订优惠</a></h3>
+                            <div class="post-content">
+                                <p>即日起至3月8号，凡是通过微信，微博，官网预订者皆享受9拆优惠</p>
+                            </div>
+                        </div>
+
+                        <!-- Posts 2 -->
+                        <div class="post-row item">
+                            <div class="left-meta-post">
+                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+                                </div>
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                            </div>
+                            <h3 class="post-title"><a href="#">最新官网即将发布</a></h3>
+                            <div class="post-content">
+                                <p>全新视觉享受. <a class="read-more" href="#">详情...</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Posts 3 -->
+                        <div class="post-row item">
+                            <div class="left-meta-post">
+                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+                                </div>
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                            </div>
+                            <h3 class="post-title"><a href="#">Iframe Video Post</a></h3>
+                            <div class="post-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+                                        More...</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Posts 4 -->
+                        <div class="post-row item">
+                            <div class="left-meta-post">
+                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+                                </div>
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                            </div>
+                            <h3 class="post-title"><a href="#">Gallery Post</a></h3>
+                            <div class="post-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+                                        More...</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Posts 5 -->
+                        <div class="post-row item">
+                            <div class="left-meta-post">
+                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+                                </div>
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                            </div>
+                            <h3 class="post-title"><a href="#">Standard Post without Image</a></h3>
+                            <div class="post-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+                                        More...</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Posts 6 -->
+                        <div class="post-row item">
+                            <div class="left-meta-post">
+                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+                                </div>
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                            </div>
+                            <h3 class="post-title"><a href="#">Iframe Audio Post</a></h3>
+                            <div class="post-content">
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+                                        More...</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End Recent Posts Carousel -->
+
+            </div>
+
+            <div class="col-md-4">
+
+                <!-- Classic Heading -->
+                <h4 class="classic-title"><span>D5潜水中心</span></h4>
+
+                <!-- Start Testimonials Carousel -->
+                <div class="custom-carousel show-one-slide touch-carousel" data-appeared-items="1">
+                    <!-- Testimonial 1 -->
+                    <div class="classic-testimonials item">
+                        <div class="testimonial-content">
+                            <p>
+                                D5潜水中心为喜欢潜水，喜爱极限运动，热爱海洋和生活的你所建立，我们具有专业PADI培训资质（PADI五星级教练发展中心），为用户提供由浅入深，高级定制的专业潜水培训课程。</p>
+                        </div>
+                        <div class="testimonial-author"><span>By</span> - Sara</div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="classic-testimonials item">
+                        <div class="testimonial-content">
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="testimonial-author"><span>John Doe</span> - Customer</div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="classic-testimonials item">
+                        <div class="testimonial-content">
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="testimonial-author"><span>John Doe</span> - Customer</div>
+                    </div>
+                </div>
+                <!-- End Testimonials Carousel -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section" style="background:#fff;">
+    <div class="container">
+
+        <!-- Start Big Heading -->
+        <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
+            <h1>我们的 <strong>教练</strong></h1>
+        </div>
+        <!-- End Big Heading -->
+
+        <!-- Some Text -->
+        <p class="text-center">行业精英教练，给您提供最专业的服务教程 <span
+                class="accent-color sh-tooltip" data-placement="right"
+                title="Simple Tooltip">精英教练</span>, 这里放教练说明
+            <br/>veritatis et quasi <span class="accent-color sh-tooltip" data-placement="bottom"
+                                          title="Simple Tooltip">architecto</span> beatae vitae dicta sunt
+            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+
+
+        <!-- Start Team Members -->
+        <div class="row">
+
+            <!-- Start Memebr 1 -->
+            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
+                <div class="team-member modern">
+                    <!-- Memebr Photo, Name & Position -->
+                    <div class="member-photo">
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
+                        <div class="member-name">教练名字 <span>指导</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Words -->
+                    <div class="member-info">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                    </div>
+                    <!-- Start Progress Bar 1 -->
+                    <div class="progress-label">优点1</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="400">
+                            <span class="percentage">96%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 2 -->
+                    <div class="progress-label">优点2</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="800">
+                            <span class="percentage">88%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 3 -->
+                    <div class="progress-label">优点3</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="1200">
+                            <span class="percentage">100%</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Social Links -->
+                    <div class="member-socail">
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
+                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Memebr 1 -->
+
+            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
+                <div class="team-member modern">
+                    <!-- Memebr Photo, Name & Position -->
+                    <div class="member-photo">
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
+                        <div class="member-name">教练名字 <span>指导</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Words -->
+                    <div class="member-info">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                    </div>
+                    <!-- Start Progress Bar 1 -->
+                    <div class="progress-label">优点1</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="400">
+                            <span class="percentage">96%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 2 -->
+                    <div class="progress-label">优点2</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="800">
+                            <span class="percentage">88%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 3 -->
+                    <div class="progress-label">优点3</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="1200">
+                            <span class="percentage">100%</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Social Links -->
+                    <div class="member-socail">
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
+                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
+                <div class="team-member modern">
+                    <!-- Memebr Photo, Name & Position -->
+                    <div class="member-photo">
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
+                        <div class="member-name">教练名字 <span>指导</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Words -->
+                    <div class="member-info">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                    </div>
+                    <!-- Start Progress Bar 1 -->
+                    <div class="progress-label">优点1</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="400">
+                            <span class="percentage">96%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 2 -->
+                    <div class="progress-label">优点2</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="800">
+                            <span class="percentage">88%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 3 -->
+                    <div class="progress-label">优点3</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="1200">
+                            <span class="percentage">100%</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Social Links -->
+                    <div class="member-socail">
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
+                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
+                <div class="team-member modern">
+                    <!-- Memebr Photo, Name & Position -->
+                    <div class="member-photo">
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
+                        <div class="member-name">教练名字 <span>指导</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Words -->
+                    <div class="member-info">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                    </div>
+                    <!-- Start Progress Bar 1 -->
+                    <div class="progress-label">优点1</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="400">
+                            <span class="percentage">96%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 2 -->
+                    <div class="progress-label">优点2</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="800">
+                            <span class="percentage">88%</span>
+                        </div>
+                    </div>
+                    <!-- Start Progress Bar 3 -->
+                    <div class="progress-label">优点3</div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
+                             data-appear-animation-delay="1200">
+                            <span class="percentage">100%</span>
+                        </div>
+                    </div>
+                    <!-- Memebr Social Links -->
+                    <div class="member-socail">
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
+                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Team Members -->
+
+    </div>
+    <!-- .container -->
+</div>
+
+<div id="parallax-one" class="parallax" style="background-image:url(#staticUrl('/margo/')images/parallax/bg-02.jpg);">
+    <div class="parallax-text-container-1">
+        <div class="parallax-text-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="counter-item">
+                            <i class="fa fa-cloud-upload"></i>
+                            <div class="timer" id="item1" data-to="991" data-speed="5000"></div>
+                            <h5>每年潜水</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="counter-item">
+                            <i class="fa fa-check"></i>
+                            <div class="timer" id="item2" data-to="100" data-speed="5000"></div>
+                            <h5>客户满意度</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="counter-item">
+                            <i class="fa fa-code"></i>
+                            <div class="timer" id="item3" data-to="100" data-speed="5000"></div>
+                            <h5>我们的服务</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <div class="counter-item">
+                            <i class="fa fa-male"></i>
+                            <div class="timer" id="item4" data-to="8423" data-speed="5000"></div>
+                            <h5>每年潜水人流量</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class=" section pricing-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Start Big Heading -->
+                <div class="big-title text-center">
+                    <h1>价格表 <strong>最新优惠!</strong></h1>
+                </div>
+                <!-- End Big Heading -->
+
+                <!-- Text -->
+                <p class="text-center">每年节假日我们将会推出不同优惠</p>
+            </div>
+        </div>
+
+        <div class="row pricing-tables">
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="pricing-table">
+                    <div class="plan-name">
+                        <h3>套餐1</h3>
+                    </div>
+                    <div class="plan-price">
+                        <div class="price-value">￥5000<span>.00</span></div>
+                        <div class="interval">per month</div>
+                    </div>
+                    <div class="plan-list">
+                        <ul>
+                            <li><strong>教练陪练</strong></li>
+                            <li><strong>3天</strong> 教程</li>
+                            <li><strong>10</strong> 种技能</li>
+                            <li><strong>20</strong> 说明</li>
+                            <li><strong>免费</strong> 的东西</li>
+                        </ul>
+                    </div>
+                    <div class="plan-signup">
+                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="pricing-table highlight-plan">
+                    <div class="plan-name">
+                        <h3>套餐1</h3>
+                    </div>
+                    <div class="plan-price">
+                        <div class="price-value">￥5000<span>.00</span></div>
+                        <div class="interval">per month</div>
+                    </div>
+                    <div class="plan-list">
+                        <ul>
+                            <li><strong>教练陪练</strong></li>
+                            <li><strong>3天</strong> 教程</li>
+                            <li><strong>10</strong> 种技能</li>
+                            <li><strong>20</strong> 说明</li>
+                            <li><strong>免费</strong> 的东西</li>
+                        </ul>
+                    </div>
+                    <div class="plan-signup">
+                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="pricing-table">
+                    <div class="plan-name">
+                        <h3>套餐1</h3>
+                    </div>
+                    <div class="plan-price">
+                        <div class="price-value">￥5000<span>.00</span></div>
+                        <div class="interval">per month</div>
+                    </div>
+                    <div class="plan-list">
+                        <ul>
+                            <li><strong>教练陪练</strong></li>
+                            <li><strong>3天</strong> 教程</li>
+                            <li><strong>10</strong> 种技能</li>
+                            <li><strong>20</strong> 说明</li>
+                            <li><strong>免费</strong> 的东西</li>
+                        </ul>
+                    </div>
+                    <div class="plan-signup">
+                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="pricing-table">
+                    <div class="plan-name">
+                        <h3>套餐1</h3>
+                    </div>
+                    <div class="plan-price">
+                        <div class="price-value">￥5000<span>.00</span></div>
+                        <div class="interval">per month</div>
+                    </div>
+                    <div class="plan-list">
+                        <ul>
+                            <li><strong>教练陪练</strong></li>
+                            <li><strong>3天</strong> 教程</li>
+                            <li><strong>10</strong> 种技能</li>
+                            <li><strong>20</strong> 说明</li>
+                            <li><strong>免费</strong> 的东西</li>
+                        </ul>
+                    </div>
+                    <div class="plan-signup">
+                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="partner">
+    <div class="container">
+        <div class="row">
+
+            <!-- Start Big Heading -->
+            <div class="big-title text-center">
+                <h1>Our Happy <strong>Clients</strong></h1>
+                <p class="title-desc">Partners We Work With</p>
+            </div>
+            <!-- End Big Heading -->
+
+            <!--Start Clients Carousel-->
+            <div class="our-clients">
+                <div class="clients-carousel custom-carousel touch-carousel navigation-3" data-appeared-items="5"
+                     data-navigation="true">
+
+                    <!-- Client 1 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c1.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 2 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c2.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 3 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c3.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 4 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c4.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 5 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c5.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 6 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c6.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 7 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c7.png" alt=""/></a>
+                    </div>
+
+                    <!-- Client 8 -->
+                    <div class="client-item item">
+                        <a href="#"><img src="#staticUrl('/margo/')images/c8.png" alt=""/></a>
+                    </div>
+
+                </div>
+            </div>
+            <!-- End Clients Carousel -->
+        </div>
+        <!-- .row -->
+    </div>
+    <!-- .container -->
+</div>
+
+#end

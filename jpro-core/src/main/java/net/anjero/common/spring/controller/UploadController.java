@@ -64,8 +64,9 @@ public class UploadController extends HttpServlet {
         response.setContentType("text/html");
         // 保存文件路径
         String filePath = DateUtils.formatDate(new Date(), "yyMMdd");
-        String realPath = ApplicationListener.getFileCatalogue() + "upload/" + filePath + "/";
-        String imgUrl = ApplicationListener.getFileUrl() + "upload/"
+        //文件源路径
+        String realPath = ApplicationListener.getProjectPath() + "/static/upload/" + filePath + "/";
+        String imgUrl = "/static/upload/"
                 + filePath + "/";
 
         // 判断路径是否存在，不存在则创建
@@ -78,11 +79,10 @@ public class UploadController extends HttpServlet {
             dff.setSizeThreshold(1024000);
             ServletFileUpload sfu = new ServletFileUpload(dff);
             try {
-                FileItemIterator fii = null;
+                FileItemIterator fii;
                 fii = sfu.getItemIterator(request);
                 String title = ""; // 图片标题
-                String url = ""; // 图片地址
-                String fileName = "";
+                String url, fileName; // 图片地址
                 String state = "SUCCESS";
                 while (fii.hasNext()) {
                     FileItemStream fis = fii.next();

@@ -128,6 +128,7 @@
 ##<script src="#staticUrl("/")AdminLTE/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="#staticUrl("/")AdminLTE/dist/js/demo.js"></script>
+<script src="#staticUrl("/")layer/layer.js"></script>
 </body>
 
 $!admin_js

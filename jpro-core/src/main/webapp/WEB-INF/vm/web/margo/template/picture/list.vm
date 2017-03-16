@@ -1,0 +1,71 @@
+#set($layout = "/vm/web/margo/layout/index.vm")
+#define($navKey)picture#end
+#define($vm_content)
+
+
+<div class="page-banner"
+     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>图片新闻 </h2>
+                <p>We Are Professional</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">主页</a></li>
+                    <li>图片新闻</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="content">
+    <div class="container">
+        <div content="page-content">
+            <div class="row">
+                <div class="col-md-4 image-service-box">
+                    <img class="img-thumbnail" src="images/service-01.jpg" alt="">
+                    <h4>Clean Modern Code</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
+                </div>
+                <div class="col-md-4 image-service-box">
+                    <img class="img-thumbnail" src="images/service-02.jpg" alt="">
+                    <h4>Great Support</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
+                </div>
+                <div class="col-md-4 image-service-box">
+                    <img class="img-thumbnail" src="images/service-03.jpg" alt="">
+                    <h4>High Quality Theme</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-4 image-service-box">
+                    <img class="img-thumbnail" src="images/service-01.jpg" alt="">
+                    <h4>Clean Modern Code</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
+                </div>
+                <div class="col-md-4 image-service-box">
+                    <img class="img-thumbnail" src="images/service-02.jpg" alt="">
+                    <h4>Great Support</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
+                </div>
+                <div class="col-md-4 image-service-box">
+                    <img class="img-thumbnail" src="images/service-03.jpg" alt="">
+                    <h4>High Quality Theme</h4>
+                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#end

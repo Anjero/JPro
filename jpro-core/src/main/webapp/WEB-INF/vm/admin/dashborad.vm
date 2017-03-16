@@ -11,6 +11,18 @@
 </section>
 <section class="content">
     主面板
+
+    <hr/>
+
+    test upload image
+    <div>
+        <form action="/commonservice/upload" method="post" enctype="application/x-www-form-urlencoded" >
+             <input type="file"/>
+            <input type="submit">
+        </form>
+    </div>
 </section>
+
+
 
 #end

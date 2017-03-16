@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]>
+<html lang="en" class="no-js"> <![endif]-->
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <title>D5潜水中心 | $!{vm_title}</title>
+    <!-- Define Charset -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="d5diving-anjero.net">
+    <meta name="author" content="Anjero">
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="#staticUrl('/margo/')asset/css/bootstrap.min.css" type="text/css" media="screen">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="#staticUrl('/margo/')css/font-awesome.min.css" type="text/css" media="screen">
+
+    <!-- Slicknav -->
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/slicknav.css" media="screen">
+
+    <!-- Margo CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/style.css" media="screen">
+
+    <!-- Responsive CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/responsive.css" media="screen">
+
+    <!-- Css3 Transitions Styles  -->
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/animate.css" media="screen">
+
+    <!-- Color CSS Styles  -->
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/red.css" title="red" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/jade.css" title="jade" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/green.css" title="green" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/blue.css" title="blue" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/beige.css" title="beige" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/cyan.css" title="cyan" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/orange.css" title="orange" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/peach.css" title="peach" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/pink.css" title="pink" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/purple.css" title="purple" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/sky-blue.css" title="sky-blue" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/yellow.css" title="yellow" media="screen"/>
+
+    <!-- Margo JS  -->
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.migrate.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/modernizrr.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')asset/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/nivo-lightbox.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.appear.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/count-to.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.textillate.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.lettering.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/mediaelement-and-player.js"></script>
+    <script type="text/javascript" src="#staticUrl('/margo/')js/jquery.slicknav.js"></script>
+
+    <!--[if IE 8]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+    <style>
+        #portfolio-list li img {
+            max-height: 300px; max-width: 300px
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+    #parse("vm/web/margo/layout/hearder.vm")
+
+    $!vm_content
+
+    #parse('vm/web/margo/layout/footer.vm')
+
+
+</div>
+<!-- End Full Body Container -->
+
+<!-- Go To Top Link -->
+<a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+<div id="loader">
+    <div class="spinner">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<script type="text/javascript" src="#staticUrl('/margo/')js/script.js"></script>
+
+</body>
+
+</html>

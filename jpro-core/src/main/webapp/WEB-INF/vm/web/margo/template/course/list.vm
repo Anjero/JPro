@@ -1,0 +1,56 @@
+#set($layout = "/vm/web/margo/layout/index.vm")
+#define($navKey)course#end
+#define($vm_content)
+<div class="page-banner"
+     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>课程</h2>
+                <p>We Are Professional</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">主页</a></li>
+                    <li>课程</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 page-content">
+
+
+                #foreach($article in $courses)
+                    #if($article.imagePath!="")
+                        <div class="blog-post image-post">
+                            <!-- Post Thumb -->
+                            <div class="post-head">
+                                <a class="lightbox" title="$!article.title" href="$!article.imagePath">
+                                    <div class="thumb-overlay"><i class="fa fa-arrows-alt"></i></div>
+                                    <img alt="" src="$!article.imagePath">
+                                </a>
+                            </div>
+                            <!-- Post Content -->
+                            <div class="post-content">
+                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                                <h2><a href="#">$!article.title</a></h2>
+
+                                <p>$!article.remark</p>
+                                <a class="main-button" href="#baseUrl('/view/')course/{$!article.id}.html">更多 <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    #end
+
+                #end
+            </div>
+
+        </div>
+    </div>
+</div>
+
+#end

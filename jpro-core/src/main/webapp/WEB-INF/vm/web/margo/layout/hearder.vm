@@ -1,0 +1,81 @@
+<div class="hidden-header"></div>
+<header class="clearfix">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <!-- Start Contact Info -->
+                    <ul class="contact-details">
+                        <li><a href="#"><i class="fa fa-map-marker"></i> 上海 , 中国</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-envelope-o"></i> info@d5diving.com</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-phone"></i> 021 - 6054 6907</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <ul class="social-list">
+                        <li>
+                            <a class="facebook itl-tooltip" data-placement="bottom" title="微博" href="#"><i
+                                    class="fa fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-default navbar-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img alt="" src="images/margo.png">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a #if($!navKey=="index")class="active"#end href="/index.html">首页</a>
+                    </li>
+                    <li>
+                        <a #if($!navKey=="course")class="active"#end href="/course.html">课程</a>
+                    </li>
+                    <li>
+                        <a #if($!navKey=="equipment")class="active"#end href="/equipment.html">器材</a>
+
+                    </li>
+                    <li>
+                        <a #if($!navKey=="coach")class="active"#end href="/coach.html">教练</a>
+                    </li>
+                    <li>
+                        <a  #if($!navKey=="picture")class="active"#end href="/picture.html">图片新闻</a>
+                    </li>
+                    <li><a #if($!navKey=="contact")class="active"#end href="/contact.html">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="wpb-mobile-menu">
+            <li>
+                <a #if($!navKey=="index")class="active"#end href="/index.html">首页</a>
+            </li>
+            <li>
+                <a #if($!navKey=="course")class="active"#end href="/course.html">课程</a>
+            </li>
+            <li>
+                <a #if($!navKey=="equipment")class="active"#end href="/equipment.html">器材</a>
+            </li>
+            <li>
+                <a #if($!navKey=="coach")class="active"#end href="/coach.html">教练</a>
+            </li>
+            <li>
+                <a #if($!navKey=="picture")class="active"#end href="/picture.html">图片新闻</a>
+            </li>
+            <li><a #if($!navKey=="contact")class="active"#end href="/contact.html">关于我们</a>
+            </li>
+        </ul>
+    </div>
+</header>

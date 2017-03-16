@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 
@@ -25,7 +24,7 @@ import javax.annotation.Resource;
  */
 
 @Controller
-@RequestMapping("/a")
+@RequestMapping("/view")
 public class ArticleController extends BaseController {
 
     @Resource
@@ -35,26 +34,22 @@ public class ArticleController extends BaseController {
     private ClassifyService classifyService;
 
 
-    @RequestMapping("/{key}/all")
-    public String page(Model model, @PathVariable String key, @RequestParam(defaultValue = "1") Integer pageNo, @RequestParam(defaultValue = "5") Integer pageSize) throws Throwable {
-//        Classify classify = classifyService.selectByKey(key);
-//        PageInfo<Article> pageInfo = articleService.pageInfo(1, pageSize, Boolean.TRUE, classify.getId());
-//        model.addAttribute("page", pageInfo);
-//        model.addAttribute("footer", classifyService.selectByKey("footer"));
-        throw  new Throwable("no!!");
-//        return "web/v_default/blogs";
-    }
-
     @RequestMapping("/{key}/{id}.html")
     public String detail(@PathVariable String key, @PathVariable Integer id, Model model) {
         Classify classify = classifyService.selectByKey(key);
+
+        if (classify == null) {
+            return redirect("/404");
+        }
+
         Article article = articleService.selectById(id);
 
         //此类别下文章才能正常显示
-        if (article.getClassifyId() != classify.getId()) {
+        if (article == null) {
             return redirect("/404");
         }
-        model.addAttribute(article);
-        return "web/v_default/detail/blog";
+        model.addAttribute("article", article);
+        model.addAttribute("classify", classify);
+        return "web/margo/template/detail/detail";
     }
 }

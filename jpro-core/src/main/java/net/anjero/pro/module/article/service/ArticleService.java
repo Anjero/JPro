@@ -44,7 +44,7 @@ public class ArticleService {
     public List<Article> selectByClassifyId(Integer classifyId) {
         ArticleExample articleExample = new ArticleExample();
         articleExample.createCriteria().andClassifyIdEqualTo(classifyId);
-        List<Article> articles = articleMapper.selectByExample(articleExample);
+        List<Article> articles = articleMapper.selectByExampleWithBLOBs(articleExample);
         return articles;
     }
 

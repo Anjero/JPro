@@ -1,0 +1,49 @@
+list.vm
+#set($layout = "/vm/web/margo/layout/index.vm")
+#define($navKey)$!classify.classifyIdentify#end
+
+#define($vm_content)
+
+<div class="page-banner"
+     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>$!classify.classifyName </h2>
+                <p>We Are Professional</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">主页</a></li>
+                    <li>$!classify.classifyName</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 blog-box">
+                <div class="post-content">
+                    <div class="post-type"><i class="fa fa-picture-o"></i></div>
+                    <h2>$!article.title</h2>
+                    <ul class="post-meta">
+                        <li>By <a href="#">D5</a></li>
+                    </ul>
+
+                    <div>
+                        $!article.content
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 page-content"></div>
+
+            <div class="col-md-3">
+                xxxxx
+            </div>
+        </div>
+    </div>
+</div>
+#end

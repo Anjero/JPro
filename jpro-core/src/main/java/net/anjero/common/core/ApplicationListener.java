@@ -16,7 +16,7 @@ public final class ApplicationListener implements ServletContextListener {
     private static String cookieDomain;
     private static String fileCatalogue;
 
-    private static String fileUrl;
+    private static String fileUrl = "/static";
     private static String wxUrl;
 
     public void contextDestroyed(ServletContextEvent event) {
@@ -65,6 +65,9 @@ public final class ApplicationListener implements ServletContextListener {
         ApplicationConstants.setjProHelper(jProHelper);
 
         ApplicationConstants.setProjectPath(projectPath);
+
+
+        this.setFileCatalogue(projectPath);
         LOG.info("start init system");
         LOG.info("1.init sysprovince config");
         LOG.info("=============System=================");

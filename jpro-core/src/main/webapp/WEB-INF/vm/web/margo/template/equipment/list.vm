@@ -1,0 +1,73 @@
+list.vm
+#set($layout = "/vm/web/margo/layout/index.vm")
+#define($navKey)equipment#end
+#define($vm_content)
+
+<div class="page-banner"
+     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>器材</h2>
+                <p>We Are Professional</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">主页</a></li>
+                    <li>器材</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 page-content">
+
+
+                #foreach($article in $equipments)
+                    <div class="row">
+                        #if($velocityCount%2==1)
+                            <div class="col-md-4">
+                                <a href="/view/equipment/$!{article.id}.html"><img src="$!article.imagePath"></a>
+                            </div>
+                            <div class="col-md-8">
+                                <h2><a href="/view/equipment/$!{article.id}.html">$!article.title</a></h2>
+                                <p>$article.remark</p>
+                                <p>
+
+                                    <a href="/view/equipment/$!{article.id}.html">详情>></a>
+                                </p>
+                            </div>
+                        #else
+
+
+
+                            <div class="col-md-8">
+                                <h2><a href="/view/equipment/$!{article.id}.html">$!article.title</a></h2>
+                                <p>$article.remark</p>
+                                <p>
+
+                                    <a href="/view/equipment/$!{article.id}.html">详情>></a>
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="/view/equipment/$!{article.id}.html"><img src="$!article.imagePath"></a>
+                            </div>
+
+                        #end
+                    </div>
+                    <hr/>
+                #end
+
+            </div>
+            <div class="col-md-3 page-content"></div>
+
+            <div class="col-md-3">
+                xxxxx
+            </div>
+        </div>
+    </div>
+</div>
+#end

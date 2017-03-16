@@ -1,0 +1,60 @@
+#set($layout = "/vm/web/margo/layout/index.vm")
+#define($navKey)contact#end
+
+#define($vm_content)
+
+<div class="page-banner"
+     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>器材</h2>
+                <p>We Are Professional</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">主页</a></li>
+                    <li>器材</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Classic Heading -->
+                <h4 class="classic-title"><span>关于我们</span></h4>
+
+                <div>
+                $article.content
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="classic-title"><span>信息</span></h4>
+                <p>#company()</p>
+                <div class="hr1" style="margin-bottom:10px;"></div>
+                <ul class="icons-list">
+                    <li><i class="fa fa-globe">  </i> <strong>Address:</strong>上海市黄浦区外马路725-731号老码头5号库206室</li>
+                    <li><i class="fa fa-envelope-o"></i> <strong>Email:</strong> d5divingcentre@126.com</li>
+                    <li><i class="fa fa-mobile"></i> <strong>Phone:</strong> +86 021 - 6054 6907</li>
+                </ul>
+                <div class="hr1" style="margin-bottom:15px;"></div>
+                <h4 class="classic-title"><span>D5潜水中心（长滩店）</span></h4>
+                <ul class="list-unstyled">
+                    <li><strong>Monday - Friday</strong> - 9am to 5pm</li>
+                    <li><strong>Saturday</strong> - 9am to 2pm</li>
+##                    <li><strong>Sunday</strong> - Closed</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+#end

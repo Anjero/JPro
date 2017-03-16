@@ -1,0 +1,8 @@
+#set($layout = "/vm/web/margo/layout/index.vm")
+
+#define($navKey)coach#end
+#define($vm_content)
+
+
+    list
+#end

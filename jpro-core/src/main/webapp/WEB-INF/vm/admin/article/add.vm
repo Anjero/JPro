@@ -18,7 +18,7 @@
         <div class="box-header with-border">
             <h3 class="box-title">文章发布</h3>
         </div>
-        <form class="form-horizontal" id="form" action="#springUrl('/')admin/article/save" onsubmit="return false">
+        <form class="form-horizontal" id="form" action="#springUrl('/')admin/article/save">
 
             <div class="box-body col-6">
                 <div class="form-group">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                     <label for="isShow" class="col-sm-2 control-label">来源</label>
-                    <div class="col-sm-5"><input id="source" name="null" class="form-control" placeholder="来源"
+                    <div class="col-sm-5"><input id="source" name="source" class="form-control" placeholder="来源"
                                                  type="text"
                                                  value="原创"></div>
                 </div>
@@ -127,6 +127,8 @@
 <script src="#staticUrl("/")AdminLTE/plugins/iCheck/icheck.min.js"></script>
 <script src="#staticUrl("/")AdminLTE/plugins/select2/select2.full.min.js"></script>
 <script>
+
+    var imagePath = "";
     $(document).ready(function () {
 
         $(".select2").select2();
@@ -141,23 +143,49 @@
         $("#articleLi").addClass("active");
 
         $("#submitBtn").click(function () {
+//            alert(ue1.getContent());
+//            alert(ue2.getContent());
+
+            var classifyId = $("#classifyId").val();
+
+            if(classifyId==0) {
+                layer.alert("请选择版块!");
+                return false;
+            }
+
             $.ajax({
                 url: '#baseUrl('/admin/article/save')',
-                async: false,
-                cache: false,
                 dataType: "json",
                 type: 'post',
+                data: {
+                    title: $("#title").val(),
+                    identityNo: $("#identityNo").val(),
+                    link: $("#link").val(),
+                    imagePath: imagePath,
+                    tag: $("#tag").val(),
+                    displayIndex: $("#displayIndex").val(),
+                    source: $("#source").val(),
+                    classifyId: classifyId,
+                    remark: ue1.getContent(),
+                    content: ue2.getContent(),
+                    isShow: $("#isShow").is(":checked"),
+                    isTop: $("#isTop").is(":checked"),
+                    isComment: $("#isComment").is(":checked"),
 
-                contentType: 'application/x-www-form-urlencoded',
-                data: $("#form").serialize(),
+                },
                 success: function (json) {
                     if (json.code == 200) {
-                        alert(json.code);
+                        alert("添加成功！");
+                        location.href = "#baseUrl('/')admin/article/index";
                     } else {
-                        alert(json.code);
+                        alert("添加失败，请联系管理员 !");
                     }
                 }
             });
+        });
+
+        $("#upload-image").change(function () {
+            _uploadFile()
         });
     });
 
@@ -169,19 +197,19 @@
         });
 //        alert(11);
         var optionsdata = {
-            url: '#springUrl('')/admin/analysis/uploadFile',
+            url: '#springUrl('')/commonservice/upload',
             secureuri: false,
-            fileElementId: 'uploadFile',
+            fileElementId: 'upload-image',
             dataType: "json",
             type: 'POST',
             data: {type: 'url'},
             success: function (data, status) {
                 console.log(data)
-                if (data.code == 200) {
+                if (data.state == "SUCCESS") {
+                    imagePath = data.url;
+//                    $("#imagePath").val(""+data.url);
                     layer.close(index_loading);
                     layer.alert("上传成功!");
-
-                    location.href='#springUrl('')/admin/analysis/step/'+data.result;
                 } else {
                     return false;
                 }
