@@ -2,9 +2,14 @@
 #define($navKey)picture#end
 #define($vm_content)
 
+    <style>
+        .image-service-box img{
+            width: 100%;
+        }
+    </style>
 
 <div class="page-banner"
-     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+     >
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -25,45 +30,19 @@
     <div class="container">
         <div content="page-content">
             <div class="row">
-                <div class="col-md-4 image-service-box">
-                    <img class="img-thumbnail" src="images/service-01.jpg" alt="">
-                    <h4>Clean Modern Code</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
-                </div>
-                <div class="col-md-4 image-service-box">
-                    <img class="img-thumbnail" src="images/service-02.jpg" alt="">
-                    <h4>Great Support</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
-                </div>
-                <div class="col-md-4 image-service-box">
-                    <img class="img-thumbnail" src="images/service-03.jpg" alt="">
-                    <h4>High Quality Theme</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
-                </div>
-            </div>
-            <hr/>
-            <div class="row">
-                <div class="col-md-4 image-service-box">
-                    <img class="img-thumbnail" src="images/service-01.jpg" alt="">
-                    <h4>Clean Modern Code</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
-                </div>
-                <div class="col-md-4 image-service-box">
-                    <img class="img-thumbnail" src="images/service-02.jpg" alt="">
-                    <h4>Great Support</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
-                </div>
-                <div class="col-md-4 image-service-box">
-                    <img class="img-thumbnail" src="images/service-03.jpg" alt="">
-                    <h4>High Quality Theme</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis quasi architect.</p>
-                </div>
+
+                #foreach($article in $pictures)
+                    <div class="col-md-4 image-service-box">
+                        <img class="img-thumbnail" style="width: 100%;" src="$!article.imagePath" alt="">
+                        <h4>$!article.title</h4>
+                        <p>$!article.content</p>
+                    </div>
+                    #if($velocityCount%3==0)
+                    </div>
+                        <hr/>
+                    <div class="row">
+                    #end
+                #end
             </div>
         </div>
     </div>

@@ -3,6 +3,70 @@
 #define($navKey)coach#end
 #define($vm_content)
 
+<div class="page-banner"
+     style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>教练</h2>
+                <p>We Are Professional</p>
+            </div>
+            <div class="col-md-6">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">主页</a></li>
+                    <li>教练</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content">
+    <div class="container">
+        <div class="page-content">
+            <div class="hr1" style="margin-bottom:50px;"></div>
+            <h4 class="classic-title"><span>我们的教练团队</span></h4>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                            <div class="member-name">ROWELL C. ENTRENA<span>菲律宾</span></div>
+                        </div>
+                        <div class="member-info">
+                            <p>10年PADI潜水教练工作经验
+                                英文、中文、日语和韩语
+                                军方预备役潜水，505搜救级潜水
+                            </p>
+                        </div>
 
-    list
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                            <div class="member-name">JULIUS SENAON TAGOMATA <span>菲律宾</span></div>
+                        </div>
+                        <div class="member-info">
+                            <p>2年PADI潜水教练工作经验
+                                水下切割焊接技术，空压机技术员/维修，潜水设备维护
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                            <div class="member-name">ALVIN GEORGE O. CAMARISTA<span>菲律宾</span></div>
+                        </div>
+                        <div class="member-info">
+                            <p>9年PADI潜水教练工作经验</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 #end

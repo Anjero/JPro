@@ -7,7 +7,6 @@
         <ol class="carousel-indicators">
             <li data-target="#main-slide" data-slide-to="0" class="active"></li>
             <li data-target="#main-slide" data-slide-to="1"></li>
-            <li data-target="#main-slide" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="item active">
@@ -25,7 +24,6 @@
                     </div>
                 </div>
             </div>
-            <!--/ Carousel item end -->
             <div class="item">
                 <img class="img-responsive" src="#staticUrl('/margo/')images/slider/bg2.jpg" alt="slider">
                 <div class="slider-content">
@@ -38,25 +36,6 @@
                         </h3>
                         <p class="animated6"><a href="#" class="slider btn btn-system btn-large">详情</a>
                         </p>
-                    </div>
-                </div>
-            </div>
-            <!--/ Carousel item end -->
-            <div class="item">
-                <img class="img-responsive" src="#staticUrl('/margo/')images/slider/bg3.jpg" alt="slider">
-                <div class="slider-content">
-                    <div class="col-md-12 text-center">
-                        <h2 class="animated7 white">
-                            <span>The way of <strong>Success</strong></span>
-                        </h2>
-                        <h3 class="animated8 white">
-                            <span>Why you are waiting</span>
-                        </h3>
-                        <div class="">
-                            <a class="animated4 slider btn btn-system btn-large btn-min-block" href="#">Get
-                                Now</a><a class="animated4 slider btn btn-default btn-min-block" href="#">Live
-                            Demo</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -75,92 +54,45 @@
             <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
                  data-animation-delay="01">
                 <div class="service-icon">
-                    <i class="fa fa-leaf icon-large"></i>
+                ##                    <i class="fa fa-leaf icon-large"></i>
                 </div>
                 <div class="service-content">
-                    <h4>High Quality Theme</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
+                    <h4>最优质的服务</h4>
+                    <p>教练贴身服务</p>
 
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
                  data-animation-delay="02">
                 <div class="service-icon">
-                    <i class="fa fa-desktop icon-large"></i>
+                ##                    <i class="fa fa-desktop icon-large"></i>
                 </div>
                 <div class="service-content">
-                    <h4>Full Responsive</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
+                    <h4>最舒适的环境</h4>
+                    <p>全身心的合适体会</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
                  data-animation-delay="03">
                 <div class="service-icon">
-                    <i class="fa fa-eye icon-large"></i>
+                ##                    <i class="fa fa-eye icon-large"></i>
                 </div>
                 <div class="service-content">
-                    <h4>Retina Display Ready</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
+                    <h4>最放松的心情</h4>
+                    <p>放松心情，全身心的享受</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
                  data-animation-delay="04">
                 <div class="service-icon">
-                    <i class="fa fa-code icon-large"></i>
+                ##                    <i class="fa fa-code icon-large"></i>
                 </div>
                 <div class="service-content">
-                    <h4>Clean Modern Code</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
+                    <h4>独特体验</h4>
+                    <p>极致风景、碧蓝海水、奇妙海洋生物</p>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
-                 data-animation-delay="05">
-                <div class="service-icon">
-                    <i class="fa fa-rocket icon-large"></i>
-                </div>
-                <div class="service-content">
-                    <h4>Fast & Light Theme</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
-                 data-animation-delay="06">
-                <div class="service-icon">
-                    <i class="fa fa-css3 icon-large"></i>
-                </div>
-                <div class="service-content">
-                    <h4>Css3 Transitions</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
-                 data-animation-delay="07">
-                <div class="service-icon">
-                    <i class="fa fa-download icon-large"></i>
-                </div>
-                <div class="service-content">
-                    <h4>Free Updates</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 service-box service-center" data-animation="fadeIn"
-                 data-animation-delay="08">
-                <div class="service-icon">
-                    <i class="fa fa-umbrella icon-large"></i>
-                </div>
-                <div class="service-content">
-                    <h4>Help & Support</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem
-                        pariatur</p>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>
@@ -169,16 +101,14 @@
         <div class="section-video-content text-center">
             <h1 class="fittext wite-text uppercase tlt">
                       <span class="texts">
-                        <span>Modern</span>
-                        <span>Clean</span>
-                        <span>Awesome</span>
-                        <span>Cool</span>
-                        <span>Great</span>
+                        <span>不一样的感觉</span>
+                        <span>每天</span>
+                        <span>每晚</span>
                       </span>
-                Margo Template is Ready for <br/>Business, Agency <strong>or</strong> Creative Portfolios
+                徜徉在海水珊瑚间与鱼儿嬉戏<br/>，夕阳傍晚在<strong>海滩篝火<strong/>旁弹唱品酒
             </h1>
-            <a href="#" class="btn-system btn-large"><i class="fa fa-tasks"></i> Check Out Features</a>
-            <a href="#" class="btn-system btn-large btn-wite"><i class="fa fa-download"></i> Purchase This Now</a>
+        ##            <a href="#" class="btn-system btn-large"><i class="fa fa-tasks"></i> Check Out Features</a>
+        ##            <a href="#" class="btn-system btn-large btn-wite"><i class="fa fa-download"></i> Purchase This Now</a>
         </div>
     </div>
 </div>
@@ -337,43 +267,19 @@
 
                     </div>
                 </div>
-                <!-- End Recent Posts Carousel -->
-
             </div>
 
             <div class="col-md-4">
-
-                <!-- Classic Heading -->
                 <h4 class="classic-title"><span>D5潜水中心</span></h4>
-
-                <!-- Start Testimonials Carousel -->
                 <div class="custom-carousel show-one-slide touch-carousel" data-appeared-items="1">
-                    <!-- Testimonial 1 -->
                     <div class="classic-testimonials item">
                         <div class="testimonial-content">
                             <p>
                                 D5潜水中心为喜欢潜水，喜爱极限运动，热爱海洋和生活的你所建立，我们具有专业PADI培训资质（PADI五星级教练发展中心），为用户提供由浅入深，高级定制的专业潜水培训课程。</p>
                         </div>
-                        <div class="testimonial-author"><span>By</span> - Sara</div>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="classic-testimonials item">
-                        <div class="testimonial-content">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="testimonial-author"><span>John Doe</span> - Customer</div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="classic-testimonials item">
-                        <div class="testimonial-content">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                mollit anim laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="testimonial-author"><span>John Doe</span> - Customer</div>
+                        <div class="testimonial-author"><span>By</span> - D5</div>
                     </div>
                 </div>
-                <!-- End Testimonials Carousel -->
 
             </div>
         </div>
@@ -381,215 +287,58 @@
 </div>
 <div class="section" style="background:#fff;">
     <div class="container">
-
-        <!-- Start Big Heading -->
         <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
             <h1>我们的 <strong>教练</strong></h1>
         </div>
-        <!-- End Big Heading -->
-
-        <!-- Some Text -->
-        <p class="text-center">行业精英教练，给您提供最专业的服务教程 <span
+        <p class="text-center">行业 <span
                 class="accent-color sh-tooltip" data-placement="right"
-                title="Simple Tooltip">精英教练</span>, 这里放教练说明
-            <br/>veritatis et quasi <span class="accent-color sh-tooltip" data-placement="bottom"
-                                          title="Simple Tooltip">architecto</span> beatae vitae dicta sunt
-            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                title="Simple Tooltip">精英教练</span>, ，给您提供最专业的服务教程
+            <br/><span class="accent-color sh-tooltip" data-placement="bottom"
+                       title="Simple Tooltip">Our industry elite coaches</span> , offer you the most professional
+            service tutorial.
 
-
-        <!-- Start Team Members -->
+        </p>
         <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                        <div class="member-name">ROWELL C. ENTRENA<span>菲律宾</span></div>
+                    </div>
+                    <div class="member-info">
+                        <p>10年PADI潜水教练工作经验
+                            英文、中文、日语和韩语
+                            军方预备役潜水，505搜救级潜水
+                        </p>
+                    </div>
 
-            <!-- Start Memebr 1 -->
-            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
-                <div class="team-member modern">
-                    <!-- Memebr Photo, Name & Position -->
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="team-member">
                     <div class="member-photo">
-                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
-                        <div class="member-name">教练名字 <span>指导</span>
-                        </div>
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                        <div class="member-name">JULIUS SENAON TAGOMATA <span>菲律宾</span></div>
                     </div>
-                    <!-- Memebr Words -->
                     <div class="member-info">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                    </div>
-                    <!-- Start Progress Bar 1 -->
-                    <div class="progress-label">优点1</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="400">
-                            <span class="percentage">96%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 2 -->
-                    <div class="progress-label">优点2</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="800">
-                            <span class="percentage">88%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 3 -->
-                    <div class="progress-label">优点3</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="1200">
-                            <span class="percentage">100%</span>
-                        </div>
-                    </div>
-                    <!-- Memebr Social Links -->
-                    <div class="member-socail">
-                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+                        <p>2年PADI潜水教练工作经验
+                            水下切割焊接技术，空压机技术员/维修，潜水设备维护
+                        </p>
                     </div>
                 </div>
             </div>
-            <!-- End Memebr 1 -->
-
-            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
-                <div class="team-member modern">
-                    <!-- Memebr Photo, Name & Position -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="team-member">
                     <div class="member-photo">
-                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
-                        <div class="member-name">教练名字 <span>指导</span>
-                        </div>
+                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                        <div class="member-name">ALVIN GEORGE O. CAMARISTA<span>菲律宾</span></div>
                     </div>
-                    <!-- Memebr Words -->
                     <div class="member-info">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                    </div>
-                    <!-- Start Progress Bar 1 -->
-                    <div class="progress-label">优点1</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="400">
-                            <span class="percentage">96%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 2 -->
-                    <div class="progress-label">优点2</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="800">
-                            <span class="percentage">88%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 3 -->
-                    <div class="progress-label">优点3</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="1200">
-                            <span class="percentage">100%</span>
-                        </div>
-                    </div>
-                    <!-- Memebr Social Links -->
-                    <div class="member-socail">
-                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
+                        <p>9年PADI潜水教练工作经验</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
-                <div class="team-member modern">
-                    <!-- Memebr Photo, Name & Position -->
-                    <div class="member-photo">
-                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
-                        <div class="member-name">教练名字 <span>指导</span>
-                        </div>
-                    </div>
-                    <!-- Memebr Words -->
-                    <div class="member-info">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                    </div>
-                    <!-- Start Progress Bar 1 -->
-                    <div class="progress-label">优点1</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="400">
-                            <span class="percentage">96%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 2 -->
-                    <div class="progress-label">优点2</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="800">
-                            <span class="percentage">88%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 3 -->
-                    <div class="progress-label">优点3</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="1200">
-                            <span class="percentage">100%</span>
-                        </div>
-                    </div>
-                    <!-- Memebr Social Links -->
-                    <div class="member-socail">
-                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12" data-animation="fadeIn" data-animation-delay="03">
-                <div class="team-member modern">
-                    <!-- Memebr Photo, Name & Position -->
-                    <div class="member-photo">
-                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png"/>
-                        <div class="member-name">教练名字 <span>指导</span>
-                        </div>
-                    </div>
-                    <!-- Memebr Words -->
-                    <div class="member-info">
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                    </div>
-                    <!-- Start Progress Bar 1 -->
-                    <div class="progress-label">优点1</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="400">
-                            <span class="percentage">96%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 2 -->
-                    <div class="progress-label">优点2</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="800">
-                            <span class="percentage">88%</span>
-                        </div>
-                    </div>
-                    <!-- Start Progress Bar 3 -->
-                    <div class="progress-label">优点3</div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-primary" data-progress-animation="100%"
-                             data-appear-animation-delay="1200">
-                            <span class="percentage">100%</span>
-                        </div>
-                    </div>
-                    <!-- Memebr Social Links -->
-                    <div class="member-socail">
-                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-                        <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                        <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
-                        <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <!-- End Team Members -->
 
     </div>
     <!-- .container -->
@@ -641,7 +390,7 @@
             <div class="col-md-12">
                 <!-- Start Big Heading -->
                 <div class="big-title text-center">
-                    <h1>价格表 <strong>最新优惠!</strong></h1>
+                    <h1>价格套餐 <strong>最新优惠!</strong></h1>
                 </div>
                 <!-- End Big Heading -->
 
@@ -655,23 +404,77 @@
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="pricing-table">
                     <div class="plan-name">
-                        <h3>套餐1</h3>
+                        <h3>套餐A+：Fun Dive</h3>
                     </div>
                     <div class="plan-price">
-                        <div class="price-value">￥5000<span>.00</span></div>
-                        <div class="interval">per month</div>
+                        <div class="price-value">￥4500<span>/人</span></div>
+                        <div class="interval">持证潜水员</div>
                     </div>
                     <div class="plan-list">
                         <ul>
-                            <li><strong>教练陪练</strong></li>
-                            <li><strong>3天</strong> 教程</li>
-                            <li><strong>10</strong> 种技能</li>
-                            <li><strong>20</strong> 说明</li>
-                            <li><strong>免费</strong> 的东西</li>
+                            <li><strong>6次开心潜（持证潜水员）</strong></li>
+                            <li><strong>4天3晚酒店</strong></li>
+                            <li><strong>当地接送交通</strong></li>
+                            <li><strong>上海 - 卡地克兰 机票</strong></li>
+                            <li><strong>-</strong></li>
+                            <li><strong>-</strong></li>
+                            <li><strong>-</strong></li>
                         </ul>
                     </div>
                     <div class="plan-signup">
-                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                        <a href="#" class="btn-system btn-small">马上预订</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="pricing-table ">
+                    <div class="plan-name">
+                        <h3>套餐B+：OW课程</h3>
+                    </div>
+                    <div class="plan-price">
+                        <div class="price-value">￥6980<span>.00</span></div>
+                        <div class="interval">开放水域潜水员</div>
+                    </div>
+                    <div class="plan-list">
+                        <ul>
+                            <li><strong>开放水域潜水员（OW）课程费用</strong></li>
+                            <li><strong>开放水域潜水员（OW）证书费用</strong></li>
+                            <li><strong>考证4潜及潜水装备租赁</strong></li>
+                            <li><strong>5天4晚酒店</strong></li>
+                            <li><strong>当地接送交通</strong></li>
+                            <li><strong>上海 - 卡地克兰 机票</strong></li>
+                            <li><strong>-</strong></li>
+                        </ul>
+                    </div>
+                    <div class="plan-signup">
+                        <a href="#" class="btn-system btn-small">马上预订</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="pricing-table">
+                    <div class="plan-name">
+                        <h3>套餐C+：AOW课程</h3>
+                    </div>
+                    <div class="plan-price">
+                        <div class="price-value">￥6980<span>.00</span></div>
+                        <div class="interval">进阶开放水域潜水员</div>
+                    </div>
+                    <div class="plan-list">
+                        <ul>
+                            <li><strong>进阶开放水域潜水员（AOW）课程费用</strong></li>
+                            <li><strong>进阶开放水域潜水员（AOW）证书费用</strong></li>
+                            <li><strong>考证3潜加1夜潜及潜水装备租赁</strong></li>
+                            <li><strong>5天4晚酒店</strong></li>
+                            <li><strong>当地接送交通</strong></li>
+                            <li><strong>上海 - 卡地克兰 机票</strong></li>
+                            <li><strong>-</strong></li>
+                        </ul>
+                    </div>
+                    <div class="plan-signup">
+                        <a href="#" class="btn-system btn-small">马上预订</a>
                     </div>
                 </div>
             </div>
@@ -680,71 +483,25 @@
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="pricing-table highlight-plan">
                     <div class="plan-name">
-                        <h3>套餐1</h3>
+                        <h3>套餐D+：OW+AOW课程</h3>
                     </div>
                     <div class="plan-price">
-                        <div class="price-value">￥5000<span>.00</span></div>
-                        <div class="interval">per month</div>
+                        <div class="price-value">￥10580<span>.00</span></div>
+                        <div class="interval">套餐</div>
                     </div>
                     <div class="plan-list">
                         <ul>
-                            <li><strong>教练陪练</strong></li>
-                            <li><strong>3天</strong> 教程</li>
-                            <li><strong>10</strong> 种技能</li>
-                            <li><strong>20</strong> 说明</li>
-                            <li><strong>免费</strong> 的东西</li>
+                            <li><strong>开放水域潜水员（OW）+ 进阶开放水域潜水员（AOW）课程费用</strong></li>
+                            <li><strong>开放水域潜水员（OW）+ 进阶开放水域潜水员（AOW）证书费用</strong></li>
+                            <li><strong>OW考证4潜及潜水装备租赁</strong></li>
+                            <li><strong>AOW考证3潜加1夜潜及潜水装备租赁</strong> 说明</li>
+                            <li><strong>7天6晚 酒店</strong></li>
+                            <li><strong>当地接送交通</strong></li>
+                            <li><strong>上海 - 卡地克兰 机票</strong></li>
                         </ul>
                     </div>
                     <div class="plan-signup">
-                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <div class="pricing-table">
-                    <div class="plan-name">
-                        <h3>套餐1</h3>
-                    </div>
-                    <div class="plan-price">
-                        <div class="price-value">￥5000<span>.00</span></div>
-                        <div class="interval">per month</div>
-                    </div>
-                    <div class="plan-list">
-                        <ul>
-                            <li><strong>教练陪练</strong></li>
-                            <li><strong>3天</strong> 教程</li>
-                            <li><strong>10</strong> 种技能</li>
-                            <li><strong>20</strong> 说明</li>
-                            <li><strong>免费</strong> 的东西</li>
-                        </ul>
-                    </div>
-                    <div class="plan-signup">
-                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <div class="pricing-table">
-                    <div class="plan-name">
-                        <h3>套餐1</h3>
-                    </div>
-                    <div class="plan-price">
-                        <div class="price-value">￥5000<span>.00</span></div>
-                        <div class="interval">per month</div>
-                    </div>
-                    <div class="plan-list">
-                        <ul>
-                            <li><strong>教练陪练</strong></li>
-                            <li><strong>3天</strong> 教程</li>
-                            <li><strong>10</strong> 种技能</li>
-                            <li><strong>20</strong> 说明</li>
-                            <li><strong>免费</strong> 的东西</li>
-                        </ul>
-                    </div>
-                    <div class="plan-signup">
-                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
+                        <a href="#" class="btn-system btn-small">马上预订</a>
                     </div>
                 </div>
             </div>
@@ -754,69 +511,5 @@
     </div>
 </div>
 
-<div class="partner">
-    <div class="container">
-        <div class="row">
-
-            <!-- Start Big Heading -->
-            <div class="big-title text-center">
-                <h1>Our Happy <strong>Clients</strong></h1>
-                <p class="title-desc">Partners We Work With</p>
-            </div>
-            <!-- End Big Heading -->
-
-            <!--Start Clients Carousel-->
-            <div class="our-clients">
-                <div class="clients-carousel custom-carousel touch-carousel navigation-3" data-appeared-items="5"
-                     data-navigation="true">
-
-                    <!-- Client 1 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c1.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 2 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c2.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 3 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c3.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 4 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c4.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 5 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c5.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 6 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c6.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 7 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c7.png" alt=""/></a>
-                    </div>
-
-                    <!-- Client 8 -->
-                    <div class="client-item item">
-                        <a href="#"><img src="#staticUrl('/margo/')images/c8.png" alt=""/></a>
-                    </div>
-
-                </div>
-            </div>
-            <!-- End Clients Carousel -->
-        </div>
-        <!-- .row -->
-    </div>
-    <!-- .container -->
-</div>
 
 #end

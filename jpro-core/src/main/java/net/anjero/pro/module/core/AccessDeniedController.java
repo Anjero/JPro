@@ -21,10 +21,10 @@ public class AccessDeniedController {
         return "admin/security/panel/accessDenied";
     }
 
-//    @RequestMapping("/404")
-//    public String notfound() {
-//        return "404";
-//    }
+    @RequestMapping("/404")
+    public String notfound() {
+        return "404";
+    }
 
     @RequestMapping("/error")
     public String error(String msg,Model model) {

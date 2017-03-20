@@ -2,7 +2,7 @@
 #define($navKey)course#end
 #define($vm_content)
 <div class="page-banner"
-     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+     style="">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -26,26 +26,32 @@
 
 
                 #foreach($article in $courses)
-                    #if($article.imagePath!="")
-                        <div class="blog-post image-post">
-                            <!-- Post Thumb -->
-                            <div class="post-head">
-                                <a class="lightbox" title="$!article.title" href="$!article.imagePath">
-                                    <div class="thumb-overlay"><i class="fa fa-arrows-alt"></i></div>
-                                    <img alt="" src="$!article.imagePath">
-                                </a>
+                    <div class="row">
+                        #if($article.imagePath!="")
+                            <div class="col-md-4">
+                                <a href="/view/equipment/$!{article.id}.html"><img src="$!article.imagePath"></a>
                             </div>
-                            <!-- Post Content -->
-                            <div class="post-content">
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                                <h2><a href="#">$!article.title</a></h2>
+                            <div class="col-md-8">
+                                <h2><a href="/view/equipment/$!{article.id}.html">$!article.title</a></h2>
+                                <p>$article.remark</p>
+                                <p>
 
-                                <p>$!article.remark</p>
-                                <a class="main-button" href="#baseUrl('/view/')course/{$!article.id}.html">更多 <i class="fa fa-angle-right"></i></a>
+                                    <a href="/view/equipment/$!{article.id}.html">详情>></a>
+                                </p>
                             </div>
-                        </div>
-                    #end
+                        #else
+                            <div class="col-md-12">
+                                <h2><a href="/view/equipment/$!{article.id}.html">$!article.title</a></h2>
+                                <p>$article.remark</p>
+                                <p>
 
+                                    <a href="/view/equipment/$!{article.id}.html">详情>></a>
+                                </p>
+                            </div>
+
+                        #end
+                    </div>
+                    <hr/>
                 #end
             </div>
 

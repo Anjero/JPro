@@ -17,7 +17,7 @@
                 <div class="col-md-5">
                     <ul class="social-list">
                         <li>
-                            <a class="facebook itl-tooltip" data-placement="bottom" title="微博" href="#"><i
+                            <a class="facebook itl-tooltip" data-placement="bottom" title="微博" href="http://weibo.com/u/6105748300"><i
                                     class="fa fa-facebook"></i></a>
                         </li>
                     </ul>
@@ -32,7 +32,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img alt="" src="images/margo.png">
+                    <img alt="" src="/static/images/logo.png">
                 </a>
             </div>
             <div class="navbar-collapse collapse">
@@ -50,10 +50,10 @@
                     <li>
                         <a #if($!navKey=="coach")class="active"#end href="/coach.html">教练</a>
                     </li>
-                    <li>
-                        <a  #if($!navKey=="picture")class="active"#end href="/picture.html">图片新闻</a>
-                    </li>
-                    <li><a #if($!navKey=="contact")class="active"#end href="/contact.html">关于我们</a>
+##                    <li>
+##                        <a  #if($!navKey=="picture")class="active"#end href="/picture.html">图片新闻</a>
+##                    </li>
+                    <li><a #if($!navKey=="contact")class="active"#end href="/contact.html">D5</a>
                     </li>
                 </ul>
             </div>
@@ -71,10 +71,10 @@
             <li>
                 <a #if($!navKey=="coach")class="active"#end href="/coach.html">教练</a>
             </li>
-            <li>
-                <a #if($!navKey=="picture")class="active"#end href="/picture.html">图片新闻</a>
-            </li>
-            <li><a #if($!navKey=="contact")class="active"#end href="/contact.html">关于我们</a>
+##            <li>
+##                <a #if($!navKey=="picture")class="active"#end href="/picture.html">图片新闻</a>
+##            </li>
+            <li><a #if($!navKey=="contact")class="active"#end href="/contact.html">D5</a>
             </li>
         </ul>
     </div>

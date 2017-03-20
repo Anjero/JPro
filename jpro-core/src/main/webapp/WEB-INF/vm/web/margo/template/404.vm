@@ -1,0 +1,18 @@
+#set($layout = "/vm/web/margo/layout/index.vm")
+
+#define($vm_content)
+<div id="content">
+    <div class="container">
+        <div class="page-content">
+            <div class="error-page">
+                <h1>404</h1>
+                <h3>页面未找到</h3>
+                <p>抱歉，请核对页面是否存在！</p>
+                <div class="text-center"><a href="/index.html" class="btn-system btn-small">回到主页</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+#end
+

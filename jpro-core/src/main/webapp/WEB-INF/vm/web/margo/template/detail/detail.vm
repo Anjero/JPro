@@ -5,7 +5,7 @@ list.vm
 #define($vm_content)
 
 <div class="page-banner"
-     style="padding:40px 0; background: url(#staticUrl('/margo/images/flickr-04.jpg')) center #f9f9f9;">
+     style="">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

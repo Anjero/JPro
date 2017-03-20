@@ -12,6 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="d5diving-anjero.net">
     <meta name="author" content="Anjero">
+
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon" />
+
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="#staticUrl('/margo/')asset/css/bootstrap.min.css" type="text/css" media="screen">
 
@@ -31,17 +34,17 @@
     <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/animate.css" media="screen">
 
     <!-- Color CSS Styles  -->
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/red.css" title="red" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/jade.css" title="jade" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/green.css" title="green" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/blue.css" title="blue" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/beige.css" title="beige" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/cyan.css" title="cyan" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/orange.css" title="orange" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/peach.css" title="peach" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/pink.css" title="pink" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/purple.css" title="purple" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/sky-blue.css" title="sky-blue" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/red.css" title="red" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/jade.css" title="jade" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/green.css" title="green" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/blue.css" title="blue" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/beige.css" title="beige" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/cyan.css" title="cyan" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/orange.css" title="orange" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/peach.css" title="peach" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/pink.css" title="pink" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/purple.css" title="purple" media="screen"/>
+##    <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/sky-blue.css" title="sky-blue" media="screen"/>
     <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/colors/yellow.css" title="yellow" media="screen"/>
 
     <!-- Margo JS  -->
@@ -73,6 +76,10 @@
         #portfolio-list li img {
             max-height: 300px; max-width: 300px
         }
+
+        .post-content p{
+            font-size:16px;
+        }
     </style>
 </head>
 
@@ -97,8 +104,9 @@
         <div class="dot2"></div>
     </div>
 </div>
-<script type="text/javascript" src="#staticUrl('/margo/')js/script.js"></script>
-
+<script type="text/javascript" src="#staticUrl('/margo/')js/script.js?v=20170317"></script>
+<script>
+</script>
 </body>
 
 </html>
