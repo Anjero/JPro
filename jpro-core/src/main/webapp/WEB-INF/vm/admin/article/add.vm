@@ -3,12 +3,12 @@
 
 <section class="content-header">
     <h1>
-        Company
-        <small>版块列表</small>
+        文章
+        <small>添加</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="/admin/dashboard"><i class="fa fa-dashboard"></i> 主面板</a></li>
-        <li><a href="/admin/company/index">文章</a></li>
+        <li><a href="/admin/article/index">文章</a></li>
         <li class="active">添加</li>
     </ol>
 </section>
