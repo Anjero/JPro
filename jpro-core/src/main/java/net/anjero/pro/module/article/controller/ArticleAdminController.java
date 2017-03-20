@@ -82,8 +82,12 @@ public class ArticleAdminController extends BaseAdminController {
     }
 
     @RequestMapping("/edit/{id}")
-    public String edit(HttpServletRequest request, HttpServletResponse response, @PathVariable Integer id) {
-        return "";
+    public String edit(Model model, @PathVariable Integer id) {
+
+        Article article = articleService.selectById(id);
+
+        model.addAttribute("article", article);
+        return "admin/article/edit";
     }
 
     @RequestMapping("/update/{id}")

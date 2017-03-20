@@ -10,7 +10,7 @@ list.vm
         <div class="row">
             <div class="col-md-6">
                 <h2>$!classify.classifyName </h2>
-                <p>We Are Professional</p>
+                <p>$!classify.classifyIdentify</p>
             </div>
             <div class="col-md-6">
                 <ul class="breadcrumbs">

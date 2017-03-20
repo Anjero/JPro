@@ -2,13 +2,12 @@
 #define($admin_content)
 
 <section class="content-header">
-    <h1>
-        文章
-        <small>添加</small>
+    <h1> 文章
+        <small>编辑</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="/admin/dashboard"><i class="fa fa-dashboard"></i> 主面板</a></li>
-        <li><a href="/admin/article/index">文章</a></li>
+        <li><a href="/admin/company/index">文章</a></li>
         <li class="active">添加</li>
     </ol>
 </section>
@@ -20,7 +19,7 @@
         </div>
         <form class="form-horizontal" id="form" action="#springUrl('/')admin/article/save">
 
-            <div class="box-body col-6">
+            <div class="box-body col-6"> a
                 <div class="form-group">
                     <label for="title" class="col-sm-2 control-label">标题</label>
                     <div class="col-sm-5"><input id="title" name="title" class="form-control" placeholder="标题"
@@ -148,7 +147,7 @@
 
             var classifyId = $("#classifyId").val();
 
-            if(classifyId==0) {
+            if (classifyId == 0) {
                 layer.alert("请选择版块!");
                 return false;
             }
