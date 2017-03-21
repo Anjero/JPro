@@ -4,3 +4,7 @@ JPro.iml
 
 jpro-core/jpro-core.iml
 jpro-core/src/main/resources/generatorConfiguration/mybatis_generator_admin_**.xml
+jpro-core/target/
+jpro-wechat/
+out/
+target/

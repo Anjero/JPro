@@ -23,11 +23,11 @@ public class AccessDeniedController {
 
     @RequestMapping("/404")
     public String notfound() {
-        return "404";
+        return "web/margo/template/404";
     }
 
     @RequestMapping("/error")
-    public String error(String msg,Model model) {
+    public String error(String msg, Model model) {
         model.addAttribute("msg", msg);
 
         return "error";

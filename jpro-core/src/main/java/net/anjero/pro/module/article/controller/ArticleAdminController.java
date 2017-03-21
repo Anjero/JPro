@@ -75,7 +75,7 @@ public class ArticleAdminController extends BaseAdminController {
         article.setInTime(new Date());
         article.setModifyTime(article.getInTime());
         article.setAuthor(getAdminId());
-        article.setClick(1);
+        article.setClick(0);
 
         articleService.insert(article);
         return success();
@@ -91,8 +91,32 @@ public class ArticleAdminController extends BaseAdminController {
     }
 
     @RequestMapping("/update/{id}")
-    public void update(HttpServletRequest request, HttpServletResponse response, @PathVariable Integer id) {
-        returnJson("", request, response);
+    @ResponseBody
+    public String update(String title, String identityNo, String link, String imagePath, String tag, Integer displayIndex, String source,
+                         Integer classifyId, String remark, String content, Boolean isShow, Boolean isTop, Boolean isComment,
+                         @PathVariable Integer id) throws ForbiddenJsonException {
+        Article article = articleService.selectById(id);
+
+        article.setImagePath(imagePath);
+        article.setTitle(title);
+        article.setIdentityNo(identityNo);
+        article.setLink(link);
+        article.setTag(tag);
+        article.setDisplayIndex(displayIndex);
+        article.setSource(source);
+        article.setIsShow(isShow);
+        article.setIsTop(isTop);
+        article.setIsComment(isComment);
+        article.setRemark(remark);
+        article.setContent(content);
+        article.setClassifyId(classifyId);
+        article.setModifyTime(new Date());
+        article.setAuthor(getAdminId());
+        article.setClick(0);
+
+        articleService.update(article);
+
+        return success();
     }
 
     @RequestMapping(value = "/delete/{id}.json", method = RequestMethod.POST, produces = MediaType.JSON_UTF_8)

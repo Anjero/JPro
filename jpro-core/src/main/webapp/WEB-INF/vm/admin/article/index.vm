@@ -38,8 +38,9 @@
                         </td>
                         <td>$article.click</td>
                         <td>
-                            <button class="btn btn-xs bg-olive btn-flat">修改</button>
-                            <button class="btn btn-xs btn-primary btn-flat">账号管理</button>
+                            <a href="#baseUrl('/')admin/article/edit/${article.id}"
+                               class="btn btn-xs bg-olive btn-flat">修改</a>
+##                            <button class="btn btn-xs btn-primary btn-flat">账号管理</button>
                         </td>
                     </tr>
                     #end

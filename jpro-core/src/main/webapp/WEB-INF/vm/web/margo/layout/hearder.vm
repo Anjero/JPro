@@ -31,8 +31,8 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">
-                    <img alt="" src="/static/images/logo.png">
+                <a class="navbar-brand" href="index.html" style="padding: 13px 0 0 27px;height: 64px;">
+                    <img alt="" src="/static/images/logo.png?v=3" style="height: 100%;">
                 </a>
             </div>
             <div class="navbar-collapse collapse">
