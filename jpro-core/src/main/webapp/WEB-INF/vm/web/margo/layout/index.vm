@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="#staticUrl('/margo/')asset/css/bootstrap.min.css" type="text/css" media="screen">
 
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="#staticUrl('/margo/')css/font-awesome.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="#springUrl('/static/margo/')css/font-awesome.min.css" type="text/css" media="screen">
 
     <!-- Slicknav -->
     <link rel="stylesheet" type="text/css" href="#staticUrl('/margo/')css/slicknav.css" media="screen">
@@ -80,6 +80,13 @@
         .post-content p{
             font-size:16px;
         }
+        #main-slide .slider-content h2,#main-slide .slider-content h3{
+           color:  #fff;
+        }
+        p{
+            font-size: 16px;
+        }
+
     </style>
 </head>
 

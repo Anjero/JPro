@@ -2,18 +2,13 @@ list.vm
 #set($layout = "/vm/web/margo/layout/index.vm")
 #define($navKey)equipment#end
 #define($vm_content)
-<style>
-    p{
-        font-size: 16px;
-    }
-</style>
 <div class="page-banner"
 >
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h2>器材</h2>
-                <p>equipment</p>
+                <p>Equipment</p>
             </div>
             <div class="col-md-6">
                 <ul class="breadcrumbs">

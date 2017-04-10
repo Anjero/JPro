@@ -9,7 +9,7 @@
 ##项目名称
 #macro( projectName )JPro Bata#end
 ##公司名
-#macro( company )上海帝屋体育文化发展有限公司#end
+#macro( company )帝屋（上海）体育文化发展有限公司#end
 
 
 #macro(ueditor_js)

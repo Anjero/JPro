@@ -1,19 +1,13 @@
 #set($layout = "/vm/web/margo/layout/index.vm")
 #define($navKey)course#end
 #define($vm_content)
-
-    <style>
-        p{
-            font-size: 16px;
-        }
-    </style>
 <div class="page-banner"
      style="">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h2>课程</h2>
-                <p>course</p>
+                <p>Course</p>
             </div>
             <div class="col-md-6">
                 <ul class="breadcrumbs">

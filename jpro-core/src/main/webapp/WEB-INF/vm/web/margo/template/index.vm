@@ -19,7 +19,7 @@
                         <h3 class="animated3">
                             <span>为注重品质的您提供最完美的潜水度假体验！</span>
                         </h3>
-                        <p class="animated4"><a href="#" class="slider btn btn-system btn-large">详情</a>
+                        <p class="animated4"><a href="/contact.html" class="slider btn btn-system btn-large">关于D5</a>
                         </p>
                     </div>
                 </div>
@@ -32,9 +32,10 @@
                             <span><strong>D5</strong> 潜水中心</span>
                         </h2>
                         <h3 class="animated5">
-                            <span>极致风景、碧蓝海水、奇妙海洋生物的独特体验</span>
+                            <span>极致风景、碧蓝海水、奇妙海洋生物的独特体验</span></h3>
+                        <h3 class="animated5"><span>两人及以上预订<strong style="color:#f8ba01;">即享8折！</strong></span>
                         </h3>
-                        <p class="animated6"><a href="#" class="slider btn btn-system btn-large">详情</a>
+                        <p class="animated6"><a href="/course.html" class="slider btn btn-system btn-large">查看课程</a>
                         </p>
                     </div>
                 </div>
@@ -88,7 +89,7 @@
                 ##                    <i class="fa fa-code icon-large"></i>
                 </div>
                 <div class="service-content">
-                    <h4>独特体验</h4>
+                    <h4>最独特的体验</h4>
                     <p>极致风景、碧蓝海水、奇妙海洋生物</p>
                 </div>
             </div>
@@ -101,11 +102,11 @@
         <div class="section-video-content text-center">
             <h1 class="fittext wite-text uppercase tlt">
                       <span class="texts">
-                        <span>不一样的感觉</span>
                         <span>每天</span>
                         <span>每晚</span>
+                        <span>每刻</span>
                       </span>
-                徜徉在海水珊瑚间与鱼儿嬉戏<br/>，夕阳傍晚在<strong>海滩篝火<strong/>旁弹唱品酒
+                徜徉在海水珊瑚间与鱼儿嬉戏<br/>夕阳傍晚在<strong>海滩篝火<strong/>旁弹唱品酒
             </h1>
         ##            <a href="#" class="btn-system btn-large"><i class="fa fa-tasks"></i> Check Out Features</a>
         ##            <a href="#" class="btn-system btn-large btn-wite"><i class="fa fa-download"></i> Purchase This Now</a>
@@ -116,7 +117,7 @@
     <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
         <h1>专业 <strong>潜水器具</strong></h1>
     </div>
-    <p class="text-center">这里放器具概述.</p>
+    <p class="text-center"><a href="/equipment.html">查看更多</a></p>
     <ul id="portfolio-list" data-animated="fadeIn">
         <li>
             <img src="#staticUrl('/margo/')images/portfolio/1.jpg" alt="" style=""/>
@@ -125,7 +126,7 @@
                 <p class="body">人类的眼睛无法在水中对焦。因此面镜能提供一段空腔让您的眼睛可以对焦且能在水底看得更清楚。 亦称作，潜水面镜，潜水者面镜，护目镜（误称），半面镜，面罩。
                 </p>
             </div>
-            <a href="#"><i class="more">+</i></a>
+            <a href="/view/equipment/6.html"><i class="more">+</i></a>
 
         </li>
         <li>
@@ -136,7 +137,7 @@
                     水分吸收热量的速度大約是空气的800倍快，因此您在水中容易快速失温。此外，有時水肺潜水环境还具有刮伤、刺伤及烧烫伤的潜在危机。潜水衣将能帮助您维持体温並防止皮肤遭受意外的伤害或晒伤。
                 </p>
             </div>
-            <a href="#"><i class="more">+</i></a>
+            <a href="/view/equipment/7.html"><i class="more">+</i></a>
 
         </li>
         <li>
@@ -147,7 +148,7 @@
                     呼吸管（schnorkel），让您能在脸浸置于水中时呼吸，同时在水花四溅的波浪中也能较轻松地呼吸而不须浪费您水肺气瓶中的空气。呼吸管在您需要花费时间等候接驳船只或需要游上一段距离才能上船或上岸而气瓶又几乎耗尽的情况下特别有用。
                 </p>
             </div>
-            <a href="#"><i class="more">+</i></a>
+            <a href="/view/equipment/8.html"><i class="more">+</i></a>
 
         </li>
         <li>
@@ -159,132 +160,132 @@
                     psi的气压。您的潜水调节器将会贴附在气瓶阀上。
                 </p>
             </div>
-            <a href="#"><i class="more">+</i></a>
+            <a href="/view/equipment/10.html"><i class="more">+</i></a>
 
         </li>
     </ul>
 </div>
 
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-
-                <!-- Start Recent Posts Carousel -->
-                <div class="latest-posts">
-                    <h4 class="classic-title"><span>最新活动</span></h4>
-                    <div class="latest-posts-classic custom-carousel touch-carousel" data-appeared-items="2">
-
-                        <!-- Posts 1 -->
-                        <div class="post-row item">
-                            <div class="left-meta-post">
-                                <div class="post-date"><span class="day">28</span><span class="month">Dec</span>
-                                </div>
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                            </div>
-                            <h3 class="post-title"><a href="#">9折预订优惠</a></h3>
-                            <div class="post-content">
-                                <p>即日起至3月8号，凡是通过微信，微博，官网预订者皆享受9拆优惠</p>
-                            </div>
-                        </div>
-
-                        <!-- Posts 2 -->
-                        <div class="post-row item">
-                            <div class="left-meta-post">
-                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
-                                </div>
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                            </div>
-                            <h3 class="post-title"><a href="#">最新官网即将发布</a></h3>
-                            <div class="post-content">
-                                <p>全新视觉享受. <a class="read-more" href="#">详情...</a></p>
-                            </div>
-                        </div>
-
-                        <!-- Posts 3 -->
-                        <div class="post-row item">
-                            <div class="left-meta-post">
-                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
-                                </div>
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                            </div>
-                            <h3 class="post-title"><a href="#">Iframe Video Post</a></h3>
-                            <div class="post-content">
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
-                                        More...</a></p>
-                            </div>
-                        </div>
-
-                        <!-- Posts 4 -->
-                        <div class="post-row item">
-                            <div class="left-meta-post">
-                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
-                                </div>
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                            </div>
-                            <h3 class="post-title"><a href="#">Gallery Post</a></h3>
-                            <div class="post-content">
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
-                                        More...</a></p>
-                            </div>
-                        </div>
-
-                        <!-- Posts 5 -->
-                        <div class="post-row item">
-                            <div class="left-meta-post">
-                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
-                                </div>
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                            </div>
-                            <h3 class="post-title"><a href="#">Standard Post without Image</a></h3>
-                            <div class="post-content">
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
-                                        More...</a></p>
-                            </div>
-                        </div>
-
-                        <!-- Posts 6 -->
-                        <div class="post-row item">
-                            <div class="left-meta-post">
-                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
-                                </div>
-                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
-                            </div>
-                            <h3 class="post-title"><a href="#">Iframe Audio Post</a></h3>
-                            <div class="post-content">
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
-                                        More...</a></p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <h4 class="classic-title"><span>D5潜水中心</span></h4>
-                <div class="custom-carousel show-one-slide touch-carousel" data-appeared-items="1">
-                    <div class="classic-testimonials item">
-                        <div class="testimonial-content">
-                            <p>
-                                D5潜水中心为喜欢潜水，喜爱极限运动，热爱海洋和生活的你所建立，我们具有专业PADI培训资质（PADI五星级教练发展中心），为用户提供由浅入深，高级定制的专业潜水培训课程。</p>
-                        </div>
-                        <div class="testimonial-author"><span>By</span> - D5</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
+##<div>
+##    <div class="container">
+##        <div class="row">
+##            <div class="col-md-8">
+##
+##                <!-- Start Recent Posts Carousel -->
+##                <div class="latest-posts">
+##                    <h4 class="classic-title"><span>最新活动</span></h4>
+##                    <div class="latest-posts-classic custom-carousel touch-carousel" data-appeared-items="2">
+##
+##                        <!-- Posts 1 -->
+##                        <div class="post-row item">
+##                            <div class="left-meta-post">
+##                                <div class="post-date"><span class="day">28</span><span class="month">Dec</span>
+##                                </div>
+##                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+##                            </div>
+##                            <h3 class="post-title"><a href="#">9折预订优惠</a></h3>
+##                            <div class="post-content">
+##                                <p>即日起至3月8号，凡是通过微信，微博，官网预订者皆享受9拆优惠</p>
+##                            </div>
+##                        </div>
+##
+##                        <!-- Posts 2 -->
+##                        <div class="post-row item">
+##                            <div class="left-meta-post">
+##                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+##                                </div>
+##                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+##                            </div>
+##                            <h3 class="post-title"><a href="#">最新官网即将发布</a></h3>
+##                            <div class="post-content">
+##                                <p>全新视觉享受. <a class="read-more" href="#">详情...</a></p>
+##                            </div>
+##                        </div>
+##
+##                        <!-- Posts 3 -->
+##                        <div class="post-row item">
+##                            <div class="left-meta-post">
+##                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+##                                </div>
+##                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+##                            </div>
+##                            <h3 class="post-title"><a href="#">Iframe Video Post</a></h3>
+##                            <div class="post-content">
+##                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+##                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+##                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+##                                        More...</a></p>
+##                            </div>
+##                        </div>
+##
+##                        <!-- Posts 4 -->
+##                        <div class="post-row item">
+##                            <div class="left-meta-post">
+##                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+##                                </div>
+##                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+##                            </div>
+##                            <h3 class="post-title"><a href="#">Gallery Post</a></h3>
+##                            <div class="post-content">
+##                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+##                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+##                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+##                                        More...</a></p>
+##                            </div>
+##                        </div>
+##
+##                        <!-- Posts 5 -->
+##                        <div class="post-row item">
+##                            <div class="left-meta-post">
+##                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+##                                </div>
+##                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+##                            </div>
+##                            <h3 class="post-title"><a href="#">Standard Post without Image</a></h3>
+##                            <div class="post-content">
+##                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+##                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+##                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+##                                        More...</a></p>
+##                            </div>
+##                        </div>
+##
+##                        <!-- Posts 6 -->
+##                        <div class="post-row item">
+##                            <div class="left-meta-post">
+##                                <div class="post-date"><span class="day">26</span><span class="month">Dec</span>
+##                                </div>
+##                                <div class="post-type"><i class="fa fa-picture-o"></i></div>
+##                            </div>
+##                            <h3 class="post-title"><a href="#">Iframe Audio Post</a></h3>
+##                            <div class="post-content">
+##                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+##                                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+##                                    culpa qui officia deserunt mollit. <a class="read-more" href="#">Read
+##                                        More...</a></p>
+##                            </div>
+##                        </div>
+##
+##                    </div>
+##                </div>
+##            </div>
+##
+##            <div class="col-md-4">
+##                <h4 class="classic-title"><span>D5潜水中心</span></h4>
+##                <div class="custom-carousel show-one-slide touch-carousel" data-appeared-items="1">
+##                    <div class="classic-testimonials item">
+##                        <div class="testimonial-content">
+##                            <p>
+##                                D5潜水中心为喜欢潜水，喜爱极限运动，热爱海洋和生活的你所建立，我们具有专业PADI培训资质（PADI五星级教练发展中心），为用户提供由浅入深，高级定制的专业潜水培训课程。</p>
+##                        </div>
+##                        <div class="testimonial-author"><span>By</span> - D5</div>
+##                    </div>
+##                </div>
+##
+##            </div>
+##        </div>
+##    </div>
+##</div>
 <div class="section" style="background:#fff;">
     <div class="container">
         <div class="big-title text-center" data-animation="fadeInDown" data-animation-delay="01">
@@ -302,7 +303,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="team-member">
                     <div class="member-photo">
-                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                        <img alt="" src="#staticUrl('/margo/')images/instructor/rowell.jpeg">
                         <div class="member-name">ROWELL C. ENTRENA<span>菲律宾</span></div>
                     </div>
                     <div class="member-info">
@@ -317,7 +318,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="team-member">
                     <div class="member-photo">
-                        <img alt="" src="#staticUrl('/margo/')images/team/face_1.png">
+                        <img alt="" src="#staticUrl('/margo/')images/instructor/julius.jpeg">
                         <div class="member-name">JULIUS SENAON TAGOMATA <span>菲律宾</span></div>
                     </div>
                     <div class="member-info">
@@ -407,7 +408,7 @@
                         <h3>套餐A+：Fun Dive</h3>
                     </div>
                     <div class="plan-price">
-                        <div class="price-value">￥4500<span>.00</span></div>
+                        <div class="price-value">￥4500<span>/位</span></div>
                         <div class="interval">持证潜水员</div>
                     </div>
                     <div class="plan-list">
@@ -434,7 +435,7 @@
                         <h3>套餐B+：OW课程</h3>
                     </div>
                     <div class="plan-price">
-                        <div class="price-value">￥6980<span>.00</span></div>
+                        <div class="price-value">￥6980<span>/位</span></div>
                         <div class="interval">开放水域潜水员</div>
                     </div>
                     <div class="plan-list">
@@ -459,7 +460,7 @@
                         <h3>套餐C+：AOW课程</h3>
                     </div>
                     <div class="plan-price">
-                        <div class="price-value">￥6980<span>.00</span></div>
+                        <div class="price-value">￥6980<span>/位</span></div>
                         <div class="interval">进阶开放水域潜水员</div>
                     </div>
                     <div class="plan-list">
@@ -486,7 +487,7 @@
                         <h3>套餐D+：OW+AOW课程</h3>
                     </div>
                     <div class="plan-price">
-                        <div class="price-value">￥10580<span>.00</span></div>
+                        <div class="price-value">￥10580<span>/位</span></div>
                         <div class="interval">套餐</div>
                     </div>
                     <div class="plan-list">

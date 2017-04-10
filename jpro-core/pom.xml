@@ -609,18 +609,18 @@
         </repository>
     </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Local Nexus Repository</name>
-            <url>http://192.168.16.251:8084/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Local Nexus Repository</name>
-            <url>http://192.168.16.251:8084/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>releases</id>-->
+            <!--<name>Local Nexus Repository</name>-->
+            <!--<url>http://192.168.16.251:8084/nexus/content/repositories/releases</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>snapshots</id>-->
+            <!--<name>Local Nexus Repository</name>-->
+            <!--<url>http://192.168.16.251:8084/nexus/content/repositories/snapshots</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 
 
 </project>
